@@ -5,8 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:lint": "next lint",
+    "test:ts": "yarn tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
     "next": "^12.1.2",
