@@ -1,5 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { pool } from "../../utils/database";
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { pool } from '../../utils/database';
 
 // examle code
 export default async function handler(
@@ -7,7 +8,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const query = "SELECT NOW()";
+    const query = 'SELECT NOW()';
     const response = await pool.query(query);
     return res.status(200).json(response.rows);
   } catch (error) {
