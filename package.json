@@ -9,6 +9,7 @@
     "test:format": "prettier --check .",
     "test:lint": "next lint",
     "test:ts": "yarn tsc --noEmit --skipLibCheck",
+    "test:all": "yarn test:format && yarn test:lint && yarn test:ts",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -39,7 +40,7 @@
   },
   "lint-staged": {
     "**/*.{js, jsx, ts,tsx}": [
-      "yarn eslint",
+      "yarn next lint",
       "yarn prettier --write"
     ]
   }
