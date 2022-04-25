@@ -6,8 +6,11 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
+    "test:format": "prettier --check .",
     "test:lint": "next lint",
-    "test:ts": "yarn tsc --noEmit --skipLibCheck"
+    "test:ts": "yarn tsc --noEmit --skipLibCheck",
+    "test:all": "yarn test:format && yarn test:lint && yarn test:ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "^12.1.2",
@@ -30,7 +33,15 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.0",
     "prettier": "^2.6.1",
     "typescript": "4.5.5"
+  },
+  "lint-staged": {
+    "**/*.{js, jsx, ts,tsx}": [
+      "yarn next lint",
+      "yarn prettier --write"
+    ]
   }
 }
