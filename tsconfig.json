@@ -20,7 +20,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/config/firebase.config.js"
+    "config/firebase.config.tsx"
   ],
   "exclude": ["node_modules"]
 }
