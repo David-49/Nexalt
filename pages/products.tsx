@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 
-import { pool } from '../utils/database';
+import { pool } from '../config/database';
 
 interface IProps {
   dateFormatted: string;
