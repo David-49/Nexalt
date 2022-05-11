@@ -3,6 +3,7 @@ import '../config/firebase';
 
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { MantineProvider } from '@mantine/core';
 import { AuthContextProvider } from '../context/AuthContext';
 import Logout from '../components/Logout';
 import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -13,14 +14,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <AuthContextProvider>
-      <Logout />
-      {noAuthRequired.includes(router.pathname) ? (
-        <Component {...pageProps} />
-      ) : (
-        <ProtectedRoute>
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <Logout />
+        {noAuthRequired.includes(router.pathname) ? (
           <Component {...pageProps} />
-        </ProtectedRoute>
-      )}
+        ) : (
+          <ProtectedRoute>
+            <Component {...pageProps} />
+          </ProtectedRoute>
+        )}
+      </MantineProvider>
     </AuthContextProvider>
   );
 }
