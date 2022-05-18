@@ -4,6 +4,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from 'firebase/auth';
 import { auth } from '../config/firebase';
 
@@ -47,14 +49,18 @@ export const AuthContextProvider = ({
     await signOut(auth);
   };
 
+  const googleProvider = new GoogleAuthProvider();
+  const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
+
   const firebaseProviderValue = useMemo(
     () => ({
       user,
       login,
       signup,
       logout,
+      signInWithGoogle,
     }),
-    [user, login, signup, logout]
+    [user, login, signup, logout, signInWithGoogle]
   );
 
   return (

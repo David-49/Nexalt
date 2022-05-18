@@ -17,6 +17,7 @@
     "@mantine/form": "^4.2.4",
     "@mantine/hooks": "^4.2.4",
     "@mantine/next": "^4.2.4",
+    "@tabler/icons": "^1.68.0",
     "firebase": "^9.6.11",
     "next": "^12.1.2",
     "pg": "^8.7.3",

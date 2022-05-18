@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import { useAuth } from '../context/AuthContext';
 
-const Logout = () => {
+export const Logout = () => {
   const { user, logout } = useAuth();
   const router = useRouter();
   const handleLogout = () => {
     logout();
-    router.push('auth/login');
+    router.push('/auth/login');
   };
   return (
     <button disabled={!user} type="submit" onClick={handleLogout}>
@@ -14,5 +14,3 @@ const Logout = () => {
     </button>
   );
 };
-
-export default Logout;
