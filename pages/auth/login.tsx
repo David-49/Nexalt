@@ -1,61 +1,71 @@
+import { Alert, Button, PasswordInput, TextInput } from '@mantine/core';
 import { NextPage } from 'next';
 import { useState } from 'react';
+import { z } from 'zod';
+import { useForm, zodResolver } from '@mantine/form';
+import { IconAlertCircle } from '@tabler/icons';
+import { useRouter } from 'next/router';
 import { useAuth } from '../../context/AuthContext';
+import { ILogin } from '../../types/Login';
+import { GoogleButtonConnection } from '../../components/GoogeButtonConnection';
 
 interface IProps {}
 
-const Products: NextPage<IProps> = (props) => {
+const schema = z.object({
+  email: z.string().email({ message: 'Email invalide' }),
+});
+
+const Login: NextPage<IProps> = (props) => {
   const { user, login } = useAuth();
-  const [data, setData] = useState({
-    email: '',
-    password: '',
+  const [isConnectionFailed, setIsConnectionFailed] = useState(false);
+  const router = useRouter();
+
+  const form = useForm({
+    schema: zodResolver(schema),
+    initialValues: {
+      email: '',
+      password: '',
+    },
   });
 
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+  const handleLogin = async (data: ILogin) => {
     try {
       await login(data.email, data.password);
+      setIsConnectionFailed(false);
+      router.push('/');
     } catch (err: any) {
-      throw new Error(err);
+      setIsConnectionFailed(true);
     }
   };
 
-  console.log(user);
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setData({ ...data, email: e.target.value });
-  };
-
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setData({ ...data, password: e.target.value });
-  };
-
   return (
-    <form onSubmit={handleLogin}>
-      <label htmlFor="email">
-        Email :
-        <input
-          type="email"
-          id="email"
-          onChange={(e) => handleEmailChange(e)}
-          value={data.email}
+    <>
+      {isConnectionFailed && (
+        <Alert
+          color="red"
+          title="Échec de connexion !"
+          icon={<IconAlertCircle />}
+          my="md"
+        >
+          Votre email ou votre mot de passe est incorrect.
+          <br />
+          Veuillez réessayez.
+        </Alert>
+      )}
+      <GoogleButtonConnection label="Connexion avec Google " />
+      <form onSubmit={form.onSubmit((values) => handleLogin(values))}>
+        <TextInput label="Email" required {...form.getInputProps('email')} />
+        <PasswordInput
           required
+          label="Mot de passe"
+          {...form.getInputProps('password')}
         />
-      </label>
-      <label htmlFor="password">
-        Mot de passe :
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => handlePasswordChange(e)}
-          value={data.password}
-          required
-        />
-      </label>
-      <button type="submit">Me connecter</button>
-    </form>
+        <Button type="submit" mt="md">
+          Me connecter
+        </Button>
+      </form>
+    </>
   );
 };
 
-export default Products;
+export default Login;
