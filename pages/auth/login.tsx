@@ -1,4 +1,10 @@
-import { Alert, Button, PasswordInput, TextInput } from '@mantine/core';
+import {
+  Alert,
+  Button,
+  PasswordInput,
+  TextInput,
+  createStyles,
+} from '@mantine/core';
 import { NextPage } from 'next';
 import { useState } from 'react';
 import { z } from 'zod';
@@ -8,6 +14,7 @@ import { useRouter } from 'next/router';
 import { useAuth } from '../../context/AuthContext';
 import { ILogin } from '../../types/Login';
 import { GoogleButtonConnection } from '../../components/GoogeButtonConnection';
+import { colors } from '../../theme';
 
 interface IProps {}
 
@@ -16,6 +23,8 @@ const schema = z.object({
 });
 
 const Login: NextPage<IProps> = (props) => {
+  // eslint-disable-next-line no-use-before-define
+  const { classes } = useStyles();
   const { user, login } = useAuth();
   const [isConnectionFailed, setIsConnectionFailed] = useState(false);
   const router = useRouter();
@@ -60,12 +69,18 @@ const Login: NextPage<IProps> = (props) => {
           label="Mot de passe"
           {...form.getInputProps('password')}
         />
-        <Button type="submit" mt="md">
+        <Button type="submit" mt="md" className={classes.btn}>
           Me connecter
         </Button>
       </form>
     </>
   );
 };
+
+const useStyles = createStyles((theme) => ({
+  btn: {
+    backgroundColor: colors.secondaryBlue,
+  },
+}));
 
 export default Login;
