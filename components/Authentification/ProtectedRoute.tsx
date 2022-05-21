@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { FC, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 interface IProps {}
 

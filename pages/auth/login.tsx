@@ -7,7 +7,8 @@ import { IconAlertCircle } from '@tabler/icons';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../context/AuthContext';
 import { ILogin } from '../../types/Login';
-import { GoogleButtonConnection } from '../../components/GoogeButtonConnection';
+import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
+import { colors } from '../../theme';
 
 interface IProps {}
 
