@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthContextProvider>
       <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
+        <GlobalStyles />
         <Logout />
         {noAuthRequired.includes(router.pathname) ? (
           <Component {...pageProps} />
