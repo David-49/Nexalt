@@ -1,4 +1,10 @@
-import { Alert, Button, PasswordInput, TextInput } from '@mantine/core';
+import {
+  Alert,
+  Button,
+  PasswordInput,
+  TextInput,
+  createStyles,
+} from '@mantine/core';
 import { NextPage } from 'next';
 import { useState } from 'react';
 import { z } from 'zod';
@@ -16,7 +22,14 @@ const schema = z.object({
   email: z.string().email({ message: 'Email invalide' }),
 });
 
+const useStyles = createStyles((theme) => ({
+  btn: {
+    backgroundColor: colors.secondaryBlue,
+  },
+}));
+
 const Login: NextPage<IProps> = (props) => {
+  const { classes } = useStyles();
   const { user, login } = useAuth();
   const [isConnectionFailed, setIsConnectionFailed] = useState(false);
   const router = useRouter();
@@ -61,7 +74,7 @@ const Login: NextPage<IProps> = (props) => {
           label="Mot de passe"
           {...form.getInputProps('password')}
         />
-        <Button type="submit" mt="md">
+        <Button type="submit" mt="md" className={classes.btn}>
           Me connecter
         </Button>
       </form>
