@@ -10,7 +10,7 @@ import { AuthContextProvider } from '../context/AuthContext';
 import { Logout } from '../components/Authentification/Logout';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
 import { mantineTheme } from '../theme/index';
-import { GlobalStyles } from '../theme/GlobalStyles';
+import { GlobalStyles } from '../theme/globalStyles';
 
 type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactNode) => ReactNode;

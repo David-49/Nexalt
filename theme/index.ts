@@ -6,10 +6,10 @@ export const mantineTheme: MantineThemeOverride = {
     brand: ['#5E48FF', '#4333B4', '#F6F5FF'],
   },
   primaryColor: 'brand',
+  white: '#F6F5FF',
 };
 
 export const colors = {
   primaryBlue: '#5E48FF',
   secondaryBlue: '#4333B4',
-  backgroundGeneral: '#F6F5FF',
 };
