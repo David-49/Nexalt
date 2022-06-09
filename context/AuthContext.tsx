@@ -41,7 +41,7 @@ export const AuthContextProvider = ({
   const signup = (email: string, password: string) =>
     createUserWithEmailAndPassword(auth, email, password);
 
-  const login = (email: string, password: string) =>
+  const signin = (email: string, password: string) =>
     signInWithEmailAndPassword(auth, email, password);
 
   const logout = async () => {
@@ -55,12 +55,12 @@ export const AuthContextProvider = ({
   const firebaseProviderValue = useMemo(
     () => ({
       user,
-      login,
+      signin,
       signup,
       logout,
       signInWithGoogle,
     }),
-    [user, login, signup, logout, signInWithGoogle]
+    [user, signin, signup, logout, signInWithGoogle]
   );
 
   return (

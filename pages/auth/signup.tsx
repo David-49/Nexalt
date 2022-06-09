@@ -12,7 +12,7 @@ import { ILogin } from '../../types/Login';
 
 interface IProps {}
 
-const Signup: NextPage<IProps> = (props) => {
+const SignUp: NextPage<IProps> = (props) => {
   const { user, signup } = useAuth();
   const [isInscriptionFailed, setIsInscriptionFailed] = useState(false);
   const router = useRouter();
@@ -91,4 +91,4 @@ const Signup: NextPage<IProps> = (props) => {
   );
 };
 
-export default Signup;
+export default SignUp;

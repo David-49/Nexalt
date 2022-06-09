@@ -20,7 +20,7 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const noAuthRequired = ['/auth/signup', '/auth/login'];
+  const noAuthRequired = ['/auth/signup', '/auth/signin'];
   const router = useRouter();
 
   const getLayout = Component.getLayout ?? ((page: ReactNode) => page);
