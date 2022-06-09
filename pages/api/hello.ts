@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { pool } from '../../utils/database';
+import { pool } from '../../config/database';
 
 // examle code
 export default async function handler(

@@ -20,17 +20,23 @@
   "plugins": ["react", "@typescript-eslint", "simple-import-sort"],
   "rules": {
     "import/no-unresolved": "off",
+    "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-nested-ternary": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+    "no-undef": "off",
     "no-unused-vars": ["warn", { "args": "none" }],
+    "react/no-unescaped-entities": "off",
     "react/jsx-filename-extension": [
       2,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
     ],
     "import/extensions": "off",
     "react/function-component-definition": "off",
-    "simple-import-sort/imports": "warn",
+    "simple-import-sort/imports": "off",
     "import/prefer-default-export": "off"
   }
 }
