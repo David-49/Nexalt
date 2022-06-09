@@ -7,7 +7,6 @@ import { MantineProvider } from '@mantine/core';
 import { ReactNode } from 'react';
 import { NextPage } from 'next';
 import { AuthContextProvider } from '../context/AuthContext';
-import { Logout } from '../components/Authentification/Logout';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
 import { mantineTheme } from '../theme/index';
 import { GlobalStyles } from '../theme/globalStyles';
@@ -30,7 +29,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <AuthContextProvider>
       <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
         <GlobalStyles />
-        <Logout />
         {noAuthRequired.includes(router.pathname) ? (
           getLayout(<Component {...pageProps} />)
         ) : (
