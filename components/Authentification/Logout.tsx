@@ -16,7 +16,7 @@ export const Logout = () => {
   const router = useRouter();
   const handleLogout = () => {
     logout();
-    router.push('/auth/login');
+    router.push('/auth/signin');
   };
   return (
     <Button

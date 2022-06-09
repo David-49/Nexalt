@@ -11,7 +11,7 @@ export const ProtectedRoute: FC<IProps> = (props) => {
 
   useEffect(() => {
     if (!user) {
-      router.push('/auth/login');
+      router.push('/auth/signin');
     }
   }, [router, user]);
 

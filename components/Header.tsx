@@ -21,7 +21,7 @@ const CONNECTION_BUTTONS_OBJECT = [
   },
   {
     id: 'signin',
-    path: '/auth/login',
+    path: '/auth/signin',
     label: 'Me connecter',
   },
 ];

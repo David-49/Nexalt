@@ -28,9 +28,9 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const Login: NextPage<IProps> = (props) => {
+const SignIn: NextPage<IProps> = (props) => {
   const { classes } = useStyles();
-  const { user, login } = useAuth();
+  const { user, signin } = useAuth();
   const [isConnectionFailed, setIsConnectionFailed] = useState(false);
   const router = useRouter();
 
@@ -44,7 +44,7 @@ const Login: NextPage<IProps> = (props) => {
 
   const handleLogin = async (data: ILogin) => {
     try {
-      await login(data.email, data.password);
+      await signin(data.email, data.password);
       setIsConnectionFailed(false);
       router.push('/');
     } catch (err: any) {
@@ -82,4 +82,4 @@ const Login: NextPage<IProps> = (props) => {
   );
 };
 
-export default Login;
+export default SignIn;
