@@ -1,36 +1,114 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import { Group, Header as HeaderApp } from '@mantine/core';
+import {
+  Button,
+  createStyles,
+  Group,
+  Header as HeaderApp,
+} from '@mantine/core';
+import { Logout } from './Authentification/Logout';
+import { useAuth } from '../context/AuthContext';
+import { colors } from '../theme';
 
 interface IProps {}
 
-export const Header: FC<IProps> = (props) => (
-  <HeaderApp height={60}>
-    <Image
-      src="/assets/Logo.svg"
-      alt="Logo de Nexalt"
-      width={100}
-      height={30}
-    />
-    <nav>
-      <Group>
-        <li>
-          <Link href="/about">
-            <a>Qui sommes-nous ?</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/plans">
-            <a>Offres et tarifs</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/resources">
-            <a>Ressources</a>
-          </Link>
-        </li>
+const CONNECTION_BUTTONS_OBJECT = [
+  {
+    id: 'signup',
+    path: '/auth/signup',
+    label: "M'inscrire",
+  },
+  {
+    id: 'signin',
+    path: '/auth/login',
+    label: 'Me connecter',
+  },
+];
+
+const useStyles = createStyles((theme) => ({
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: theme.spacing.sm,
+    paddingLeft: 60,
+    paddingRight: 300,
+    background: 'transparent',
+    borderBottom: 'none',
+    paddingTop: 50,
+  },
+  labelNav: {
+    fontWeight: 'bold',
+  },
+  signInBtn: {
+    backgroundColor: colors.secondaryBlue,
+    textTransform: 'uppercase',
+  },
+  signUpBtn: {
+    backgroundColor: colors.primaryBlue,
+    textTransform: 'uppercase',
+  },
+}));
+
+export const Header: FC<IProps> = (props) => {
+  const { classes } = useStyles();
+
+  const { user } = useAuth();
+
+  const connectionButtons = () => (
+    <Group spacing={32}>
+      {CONNECTION_BUTTONS_OBJECT.map((item) => (
+        <Link href={item.path} key={item.id}>
+          <a>
+            <Button
+              radius="md"
+              className={
+                item.id === 'signin' ? classes.signInBtn : classes.signUpBtn
+              }
+            >
+              {item.label}
+            </Button>
+          </a>
+        </Link>
+      ))}
+    </Group>
+  );
+
+  return (
+    <HeaderApp height={100} className={classes.container}>
+      <Group spacing={60}>
+        <Link href="/">
+          <a>
+            <Image
+              src="/assets/Logo.svg"
+              alt="Logo de Nexalt"
+              width={120}
+              height={40}
+            />
+          </a>
+        </Link>
+        <nav>
+          <Group>
+            <li>
+              <Link href="/about">
+                <a className={classes.labelNav}>Qui sommes-nous ?</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/plans">
+                <a className={classes.labelNav}>Offres et tarifs</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/resources">
+                <a className={classes.labelNav}>Ressources</a>
+              </Link>
+            </li>
+          </Group>
+        </nav>
       </Group>
-    </nav>
-  </HeaderApp>
-);
+      {user ? <Logout /> : connectionButtons()}
+    </HeaderApp>
+  );
+};
