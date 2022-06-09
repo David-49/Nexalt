@@ -16,6 +16,12 @@ import { ILogin } from '../../types/Login';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { colors } from '../../theme';
 
+const useStyles = createStyles((theme) => ({
+  btn: {
+    backgroundColor: colors.secondaryBlue,
+  },
+}));
+
 interface IProps {}
 
 const schema = z.object({
