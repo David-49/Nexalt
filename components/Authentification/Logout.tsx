@@ -7,6 +7,11 @@ const useStyles = createStyles((theme) => ({
   btn: {
     backgroundColor: colors.secondaryBlue,
     textTransform: 'uppercase',
+    fontSize: 16,
+    paddingTop: 12,
+    paddingBottom: 12,
+    paddingLeft: 22,
+    paddingRight: 22,
   },
 }));
 
@@ -21,6 +26,7 @@ export const Logout = () => {
   return (
     <Button
       radius="md"
+      size="md"
       className={classes.btn}
       type="submit"
       onClick={handleLogout}

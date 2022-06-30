@@ -6,5 +6,13 @@ interface IProps {}
 
 export const Layout: FC<IProps> = (props) => {
   const { children } = props;
-  return <AppShell header={<Header />}>{children}</AppShell>;
+  return (
+    <AppShell
+      style={{ paddingLeft: '150px', paddingRight: '150px' }}
+      header={<Header />}
+      padding={0}
+    >
+      {children}
+    </AppShell>
+  );
 };
