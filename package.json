@@ -12,6 +12,8 @@
     "test:all": "yarn test:format && yarn test:lint && yarn test:ts"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.11",
+    "@fontsource/poppins": "^4.5.8",
     "@mantine/core": "^4.2.4",
     "@mantine/form": "^4.2.4",
     "@mantine/hooks": "^4.2.4",
