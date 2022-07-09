@@ -3,12 +3,12 @@ import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: 'nexalt-7910a.firebaseapp.com',
-  projectId: 'nexalt-7910a',
-  storageBucket: 'nexalt-7910a.appspot.com',
-  messagingSenderId: '48625670140',
-  appId: '1:48625670140:web:f4270069c1d08a089f8479',
-  measurementId: 'G-9FE31PD7RX',
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
