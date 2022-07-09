@@ -32,22 +32,26 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: theme.spacing.sm,
-    paddingLeft: 60,
-    paddingRight: 300,
     background: 'transparent',
     borderBottom: 'none',
     paddingTop: 50,
   },
   labelNav: {
     fontWeight: 'bold',
+    fontSize: 18,
   },
   signInBtn: {
     backgroundColor: colors.secondaryBlue,
     textTransform: 'uppercase',
+    fontSize: 16,
   },
   signUpBtn: {
     backgroundColor: colors.primaryBlue,
     textTransform: 'uppercase',
+    fontSize: 16,
+  },
+  containerButtons: {
+    marginRight: 75,
   },
 }));
 
@@ -62,6 +66,7 @@ export const Header: FC<IProps> = (props) => {
         <Link href={item.path} key={item.id}>
           <a>
             <Button
+              size="md"
               radius="md"
               className={
                 item.id === 'signin' ? classes.signInBtn : classes.signUpBtn
@@ -108,7 +113,9 @@ export const Header: FC<IProps> = (props) => {
           </Group>
         </nav>
       </Group>
-      {user ? <Logout /> : connectionButtons()}
+      <div className={classes.containerButtons}>
+        {user ? <Logout /> : connectionButtons()}
+      </div>
     </HeaderApp>
   );
 };
