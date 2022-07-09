@@ -9,7 +9,7 @@ import { NextPage } from 'next';
 import { AuthContextProvider } from '../context/AuthContext';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
 import { mantineTheme } from '../theme/index';
-import { GlobalStyles } from '../theme/globalStyles';
+import { GlobalStyles } from '../theme/global';
 
 type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactNode) => ReactNode;
