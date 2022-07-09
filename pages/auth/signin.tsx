@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
 
 const SignIn: NextPage<IProps> = (props) => {
   const { classes } = useStyles();
-  const { user, signin } = useAuth();
+  const { signin } = useAuth();
   const [isConnectionFailed, setIsConnectionFailed] = useState(false);
   const router = useRouter();
 

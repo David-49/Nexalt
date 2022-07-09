@@ -13,7 +13,7 @@ import { ILogin } from '../../types/Login';
 interface IProps {}
 
 const SignUp: NextPage<IProps> = (props) => {
-  const { user, signup } = useAuth();
+  const { signup } = useAuth();
   const [isInscriptionFailed, setIsInscriptionFailed] = useState(false);
   const router = useRouter();
 
@@ -46,8 +46,6 @@ const SignUp: NextPage<IProps> = (props) => {
       setIsInscriptionFailed(true);
     }
   };
-
-  console.log(user);
 
   return (
     <>
