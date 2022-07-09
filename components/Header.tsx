@@ -90,6 +90,7 @@ export const Header: FC<IProps> = (props) => {
               alt="Logo de Nexalt"
               width={120}
               height={40}
+              priority
             />
           </a>
         </Link>
