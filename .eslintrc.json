@@ -29,6 +29,7 @@
     "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
     "no-undef": "off",
     "no-unused-vars": ["warn", { "args": "none" }],
+    "react/require-default-props": "off",
     "react/no-unescaped-entities": "off",
     "react/jsx-filename-extension": [
       2,
