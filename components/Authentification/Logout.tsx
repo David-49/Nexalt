@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
 
 export const Logout = () => {
   const { classes } = useStyles();
-  const { user, logout } = useAuth();
+  const { logout } = useAuth();
   const router = useRouter();
   const handleLogout = () => {
     logout();
