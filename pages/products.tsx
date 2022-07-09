@@ -1,6 +1,6 @@
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 
-import { pool } from '../config/database';
+// import { pool } from '../config/database';
 
 interface IProps {
   dateFormatted: string;
@@ -14,11 +14,11 @@ const Products: NextPage<IProps> = (props) => {
 
 export default Products;
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const query = 'SELECT NOW()';
-  const dateNow = (await pool.query(query)).rows;
-  const dateFormatted = dateNow[0].now.toString();
-  return {
-    props: { dateFormatted },
-  };
-};
+// export const getStaticProps: GetStaticProps = async (ctx) => {
+//   const query = 'SELECT NOW()';
+//   const dateNow = (await pool.query(query)).rows;
+//   const dateFormatted = dateNow[0].now.toString();
+//   return {
+//     props: { dateFormatted },
+//   };
+// };
