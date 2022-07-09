@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { Card, createStyles, Text } from '@mantine/core';
 import { IconSearch } from '@tabler/icons';
 

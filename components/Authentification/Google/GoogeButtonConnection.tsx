@@ -1,6 +1,7 @@
+import { FC } from 'react';
+
 import { Button } from '@mantine/core';
 import { useRouter } from 'next/router';
-import { FC } from 'react';
 import { useAuth } from '../../../context/AuthContext';
 import LogosGoogleIcon from './LogosGoogleIcon';
 

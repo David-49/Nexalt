@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
+
 import '../styles/globals.css';
 import '../config/firebase';
 
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { MantineProvider } from '@mantine/core';
-import { ReactNode } from 'react';
 import { NextPage } from 'next';
 import { AuthContextProvider } from '../context/AuthContext';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';

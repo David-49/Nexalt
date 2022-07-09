@@ -1,7 +1,8 @@
+import { FC, useState } from 'react';
+
 import { PasswordInput, Popover, Progress } from '@mantine/core';
 import { GetInputPropsPayload } from '@mantine/form/lib/types';
 import { UseFormReturnType } from '@mantine/form/lib/use-form';
-import { FC, useState } from 'react';
 import { PasswordRequirement } from './PasswordRequirement';
 
 interface IProps {

@@ -1,5 +1,6 @@
-import { Group, Title } from '@mantine/core';
 import { FC } from 'react';
+
+import { Group, Title } from '@mantine/core';
 import { colors } from '../../theme';
 import { StrongPointsCard } from './StrongPointsCard';
 

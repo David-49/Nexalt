@@ -1,6 +1,7 @@
+import { FC } from 'react';
+
 import { Autocomplete, Button, createStyles, Group } from '@mantine/core';
 import { IconMapPin, IconSearch } from '@tabler/icons';
-import { FC } from 'react';
 import { colors } from '../theme';
 
 interface IProps {}

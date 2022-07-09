@@ -1,9 +1,10 @@
+import { useState } from 'react';
+
 import { Alert, Button, PasswordInput, TextInput } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { IconAlertCircle } from '@tabler/icons';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 import { z } from 'zod';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { PasswordStrength } from '../../components/Authentification/PasswordStrength';

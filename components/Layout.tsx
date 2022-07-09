@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { AppShell, createStyles } from '@mantine/core';
 import { Header } from './Header';
 import { Footer } from './Footer';

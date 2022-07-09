@@ -1,5 +1,6 @@
-import { NextPage } from 'next';
 import { ReactElement, ReactNode } from 'react';
+
+import { NextPage } from 'next';
 import { Header } from '../components/Header';
 
 type HomePageWithLayout = NextPage & {

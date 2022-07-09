@@ -1,6 +1,7 @@
+import { FC } from 'react';
+
 import { Box, Text } from '@mantine/core';
 import { IconCheck, IconX } from '@tabler/icons';
-import { FC } from 'react';
 
 interface IProps {
   label: string;
