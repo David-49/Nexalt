@@ -12,4 +12,5 @@ export const mantineTheme: MantineThemeOverride = {
 export const colors = {
   primaryBlue: '#5E48FF',
   secondaryBlue: '#4333B4',
+  primaryBackgroundColor: '#F6F5FF',
 };
