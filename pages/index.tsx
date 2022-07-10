@@ -51,7 +51,9 @@ const useStyles = createStyles((theme) => ({
     marginTop: 293,
   },
   containerPartnerCompanies: {
+    margin: 'auto',
     marginTop: 220,
+    width: '100%',
   },
   containerPlatformOperation: {
     marginTop: 140,

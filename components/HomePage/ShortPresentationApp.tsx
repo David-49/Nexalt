@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 800,
     fontSize: 40,
-    width: '50%',
+    width: '60%',
     textAlign: 'center',
     marginBottom: 60,
   },
