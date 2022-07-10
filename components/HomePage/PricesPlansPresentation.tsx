@@ -15,6 +15,9 @@ const useStyles = createStyles((theme) => ({
     color: '#fff',
     marginBottom: 20,
   },
+  leftSide: {
+    width: '40%',
+  },
   btn: {
     backgroundColor: '#fff',
     color: colors.secondaryBlue,
@@ -31,8 +34,8 @@ const useStyles = createStyles((theme) => ({
 export const PricesPlansPresentation: FC<IProps> = (props) => {
   const { classes } = useStyles();
   return (
-    <Group direction="row" grow>
-      <Stack>
+    <Group direction="row">
+      <Stack className={classes.leftSide}>
         <Title order={2} className={classes.title}>
           Offres et tarifs
         </Title>

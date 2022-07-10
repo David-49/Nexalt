@@ -62,7 +62,7 @@ const useStyles = createStyles((theme) => ({
     marginRight: 10,
   },
   containerPricesPlansPresentation: {
-    marginTop: 264,
+    marginTop: 247,
   },
   containerShortPresentation: {
     margin: 'auto',

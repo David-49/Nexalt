@@ -17,8 +17,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     gap: 10,
-    flex: '1 1 200px',
-    height: 223,
+    flex: '1 1 220px',
     padding: '35px !important',
   },
   icon: {

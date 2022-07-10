@@ -28,6 +28,9 @@ const useStyles = createStyles((theme) => ({
     height: 64,
     boxShadow: '0px 5px 15px #0000001A',
   },
+  containerCard: {
+    alignItems: 'stretch',
+  },
 }));
 
 export const ShortPresentation: FC<IProps> = (props) => {
@@ -37,7 +40,7 @@ export const ShortPresentation: FC<IProps> = (props) => {
       <Title order={2} className={classes.title}>
         Bienvenue sur la meilleure plateforme de recherche d'alternance
       </Title>
-      <Group spacing={60}>
+      <Group spacing={60} className={classes.containerCard}>
         <StrongPointsCard
           backgroundColor="#fff"
           iconColor={colors.primaryBlue}

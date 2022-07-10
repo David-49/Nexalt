@@ -12,6 +12,9 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 'bold',
     color: '#fff',
   },
+  containerCard: {
+    alignItems: 'stretch',
+  },
 }));
 
 export const StrongPoints: FC<IProps> = (props) => {
@@ -22,7 +25,12 @@ export const StrongPoints: FC<IProps> = (props) => {
       <Title className={classes.title} order={2}>
         Nos points forts
       </Title>
-      <Group grow spacing={44} position="apart">
+      <Group
+        grow
+        spacing={44}
+        position="apart"
+        className={classes.containerCard}
+      >
         <StrongPointsCard
           contentCard="Trouvez facilement des alternants pour votre entreprise et
               contactez gratuitement les profils vérifiés de votre choix."
