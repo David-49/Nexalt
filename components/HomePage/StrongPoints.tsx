@@ -7,7 +7,7 @@ import { StrongPointsCard } from './StrongPointsCard';
 interface IProps {}
 
 export const StrongPoints: FC<IProps> = (props) => (
-  <Group spacing={20}>
+  <Group spacing={20} direction="column">
     <Title
       style={{
         fontSize: 40,
