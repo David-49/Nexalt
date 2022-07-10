@@ -20,6 +20,7 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
+    width: '100%',
     backgroundColor: 'transparent',
     borderTop: 'none',
     zIndex: 1,
@@ -50,7 +51,7 @@ export const Footer: FC<IProps> = (props) => {
 
   return (
     <FooterApp height={270} className={classes.containerFooter}>
-      <Group spacing={120} align="flex-start" noWrap>
+      <Group spacing={120} align="flex-start">
         <Stack>
           <div>
             <Image

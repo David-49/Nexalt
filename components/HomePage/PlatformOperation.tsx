@@ -36,7 +36,7 @@ export const PlatformOperation: FC<IProps> = (props) => {
       <Title className={classes.title} order={2}>
         Fonctionnement de la plateforme
       </Title>
-      <Group grow spacing={44} position="apart" noWrap>
+      <Group grow spacing={44} position="apart">
         <StrongPointsCard
           contentCard="Inscrivez-vous en tant qu’étudiant ou entreprise et renseignez vos informations personnelles."
           backgroundColor="#fff"

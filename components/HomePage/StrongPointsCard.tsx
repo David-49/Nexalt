@@ -37,7 +37,7 @@ export const StrongPointsCard: FC<IProps> = (props) => {
       className={classes.card}
       style={{ backgroundColor, boxShadow }}
     >
-      <IconSearch size={40} color={iconColor} />
+      <IconSearch size={40} color={iconColor} className={classes.icon} />
       <Text color={textColor}>{contentCard}</Text>
     </Card>
   );

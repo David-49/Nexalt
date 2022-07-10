@@ -23,22 +23,20 @@ const useStyles = createStyles((theme) => ({
     fontSize: 25,
     marginTop: 45,
   },
-  containerCardPrice: {
-    marginLeft: 220,
-    marginRight: 110,
-    flexWrap: 'nowrap',
+  text: {
+    width: '80%',
   },
 }));
 
 export const PricesPlansPresentation: FC<IProps> = (props) => {
   const { classes } = useStyles();
   return (
-    <Group direction="row" noWrap>
+    <Group direction="row" grow>
       <Stack>
         <Title order={2} className={classes.title}>
           Offres et tarifs
         </Title>
-        <Text color="#fff">
+        <Text color="#fff" className={classes.text}>
           Nexalt Pro vous permet d’accéder à plus de fonctionnalités pour
           trouver au plus vite votre alternant ou votre future entreprise.
           Sélectionner l’offre qui vous convient (étudiant ou entreprise) pour
@@ -50,11 +48,7 @@ export const PricesPlansPresentation: FC<IProps> = (props) => {
           </Button>
         </Link>
       </Stack>
-      <Group
-        spacing={65}
-        align="flex-end"
-        className={classes.containerCardPrice}
-      >
+      <Group spacing={65} align="flex-end" noWrap>
         <CardPrice
           linkUrl="/auth/signup"
           cardTitle="Formule Étudiante"

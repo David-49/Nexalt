@@ -49,6 +49,7 @@ const useStyles = createStyles((theme) => ({
   },
   containerStrongPoints: {
     marginTop: 293,
+    width: '100%',
   },
   containerPartnerCompanies: {
     margin: 'auto',
