@@ -21,7 +21,6 @@ import { SocialMedia } from '../components/HomePage/SocialMedia';
 const useStyles = createStyles((theme) => ({
   containerPage: {
     marginTop: 138,
-    overflow: 'hidden',
     padding: 0,
   },
   title: {
@@ -63,7 +62,9 @@ const useStyles = createStyles((theme) => ({
     marginTop: 264,
   },
   containerShortPresentation: {
+    margin: 'auto',
     marginTop: 130,
+    width: '80%',
   },
   containerSocialMedia: {
     marginTop: 180,

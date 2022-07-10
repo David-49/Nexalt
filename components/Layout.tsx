@@ -10,7 +10,6 @@ const useStyles = createStyles((theme) => ({
   containerAppShell: {
     paddingLeft: '150px',
     paddingRight: '150px',
-    overflowX: 'hidden',
   },
 }));
 
