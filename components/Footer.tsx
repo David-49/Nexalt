@@ -11,6 +11,8 @@ import {
   Title,
 } from '@mantine/core';
 import Link from 'next/link';
+import { FormBottomHomePagePart2 } from './shapes/FormBottomHomePagePart2';
+import { colors } from '../theme';
 
 interface IProps {}
 
@@ -21,6 +23,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
+    position: 'relative',
     backgroundColor: 'transparent',
     borderTop: 'none',
     zIndex: 1,
@@ -42,6 +45,21 @@ const useStyles = createStyles((theme) => ({
   copyright: {
     fontSize: 18,
   },
+  containerBottomFormPart2: {
+    position: 'absolute',
+    bottom: -50,
+    left: -150,
+    width: '97vw',
+    zIndex: -1,
+  },
+  fixWhiteSpace: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: colors.secondaryBlue,
+    height: 40,
+  },
 }));
 
 export const Footer: FC<IProps> = (props) => {
@@ -50,7 +68,11 @@ export const Footer: FC<IProps> = (props) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FooterApp height={270} className={classes.containerFooter}>
+    <FooterApp height="50%" className={classes.containerFooter}>
+      <div className={classes.containerBottomFormPart2}>
+        <div className={classes.fixWhiteSpace} />
+        <FormBottomHomePagePart2 />
+      </div>
       <Group spacing={120} align="flex-start">
         <Stack>
           <div>
