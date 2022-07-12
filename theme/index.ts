@@ -1,5 +1,6 @@
 import { MantineThemeOverride } from '@mantine/core';
 import '@fontsource/montserrat/800.css';
+import '@fontsource/montserrat';
 import '@fontsource/poppins';
 import '@fontsource/poppins/800.css';
 

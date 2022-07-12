@@ -45,11 +45,13 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: colors.secondaryBlue,
     textTransform: 'uppercase',
     fontSize: 16,
+    height: 46,
   },
   signUpBtn: {
     backgroundColor: colors.primaryBlue,
     textTransform: 'uppercase',
     fontSize: 16,
+    height: 46,
   },
   containerButtons: {
     marginRight: 75,
