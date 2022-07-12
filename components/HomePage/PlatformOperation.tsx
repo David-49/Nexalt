@@ -12,6 +12,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 'bold',
     marginBottom: 60,
     fontFamily: 'Poppins, sans-serif',
+    textAlign: 'center',
   },
   btn: {
     fontSize: 24,
