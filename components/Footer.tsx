@@ -1,18 +1,8 @@
 import { FC } from 'react';
 
 import Image from 'next/image';
-import {
-  createStyles,
-  Footer as FooterApp,
-  Group,
-  List,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { createStyles, Group, List, Stack, Text, Title } from '@mantine/core';
 import Link from 'next/link';
-import { FormBottomHomePagePart2 } from './shapes/FormBottomHomePagePart2';
-import { colors } from '../theme';
 
 interface IProps {}
 
@@ -27,6 +17,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: 'transparent',
     borderTop: 'none',
     zIndex: 1,
+    gap: 30,
   },
   listStyle: {
     color: '#fff',
@@ -45,21 +36,6 @@ const useStyles = createStyles((theme) => ({
   copyright: {
     fontSize: 18,
   },
-  containerBottomFormPart2: {
-    position: 'absolute',
-    bottom: -50,
-    left: -150,
-    width: '97vw',
-    zIndex: -1,
-  },
-  fixWhiteSpace: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: colors.secondaryBlue,
-    height: 40,
-  },
 }));
 
 export const Footer: FC<IProps> = (props) => {
@@ -68,11 +44,7 @@ export const Footer: FC<IProps> = (props) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FooterApp height="50%" className={classes.containerFooter}>
-      <div className={classes.containerBottomFormPart2}>
-        <div className={classes.fixWhiteSpace} />
-        <FormBottomHomePagePart2 />
-      </div>
+    <footer className={classes.containerFooter}>
       <Group spacing={120} align="flex-start">
         <Stack>
           <div>
@@ -143,6 +115,6 @@ export const Footer: FC<IProps> = (props) => {
       <Text color="#fff" className={classes.copyright}>
         {`© ${currentYear} NEXALT. ALL RIGHT RESERVED.`}
       </Text>
-    </FooterApp>
+    </footer>
   );
 };
