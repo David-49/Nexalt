@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
   containerAppShell: {
     paddingLeft: '150px',
     paddingRight: '150px',
-    overflowX: 'hidden',
+    width: '100%',
   },
 }));
 
@@ -23,6 +23,9 @@ export const Layout: FC<IProps> = (props) => {
       header={<Header />}
       footer={<Footer />}
       padding={0}
+      styles={{
+        main: { width: '100%' },
+      }}
     >
       {children}
     </AppShell>

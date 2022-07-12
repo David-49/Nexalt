@@ -8,7 +8,6 @@ import { Layout } from '../components/Layout';
 import { colors } from '../theme';
 import { HomePageFilter } from '../components/HomePageFilter';
 import { FormBottomHomePagePart1 } from '../components/shapes/FormBottomHomePagePart1';
-import { FormBottomHomePagePart2 } from '../components/shapes/FormBottomHomePagePart2';
 import { FormTopHomePage } from '../components/shapes/FormTopHomePage';
 import womanImage from '../public/assets/images/photo_accueil@2x.png';
 import { StrongPoints } from '../components/HomePage/StrongPoints';
@@ -21,8 +20,8 @@ import { SocialMedia } from '../components/HomePage/SocialMedia';
 const useStyles = createStyles((theme) => ({
   containerPage: {
     marginTop: 138,
-    overflow: 'hidden',
     padding: 0,
+    width: '100%',
   },
   title: {
     fontSize: 50,
@@ -50,9 +49,12 @@ const useStyles = createStyles((theme) => ({
   },
   containerStrongPoints: {
     marginTop: 293,
+    width: '100%',
   },
   containerPartnerCompanies: {
+    margin: 'auto',
     marginTop: 220,
+    width: '100%',
   },
   containerPlatformOperation: {
     marginTop: 140,
@@ -60,34 +62,24 @@ const useStyles = createStyles((theme) => ({
     marginRight: 10,
   },
   containerPricesPlansPresentation: {
-    marginTop: 264,
+    marginTop: 247,
+    position: 'relative',
   },
   containerShortPresentation: {
+    margin: 'auto',
     marginTop: 130,
+    width: '80%',
   },
   containerSocialMedia: {
     marginTop: 180,
-    marginBottom: 200,
+    marginBottom: 250,
   },
   containerBottomFormPart1: {
     position: 'absolute',
-    top: 2550,
-    left: 0,
+    width: '97vw',
+    top: -85,
+    left: -150,
     zIndex: -1,
-  },
-  containerBottomFormPart2: {
-    position: 'absolute',
-    top: 3771,
-    left: 0,
-    zIndex: -1,
-  },
-  fixWhiteSpace: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: colors.secondaryBlue,
-    height: 40,
   },
 }));
 
@@ -142,15 +134,11 @@ const Home: PageWithLayout = () => {
       <div className={classes.containerPlatformOperation}>
         <PlatformOperation />
       </div>
-      <div className={classes.containerBottomFormPart1}>
-        <FormBottomHomePagePart1 />
-      </div>
-      <div className={classes.containerBottomFormPart2}>
-        <div className={classes.fixWhiteSpace} />
-        <FormBottomHomePagePart2 />
-      </div>
 
       <div className={classes.containerPricesPlansPresentation}>
+        <div className={classes.containerBottomFormPart1}>
+          <FormBottomHomePagePart1 />
+        </div>
         <PricesPlansPresentation />
       </div>
 

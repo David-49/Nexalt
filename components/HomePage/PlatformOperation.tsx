@@ -12,6 +12,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 'bold',
     marginBottom: 60,
     fontFamily: 'Poppins, sans-serif',
+    textAlign: 'center',
   },
   btn: {
     fontSize: 24,
@@ -26,6 +27,9 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: '#fff',
     boxShadow: '0px 5px 15px #0000001A',
   },
+  containerCard: {
+    alignItems: 'stretch',
+  },
 }));
 
 export const PlatformOperation: FC<IProps> = (props) => {
@@ -36,7 +40,12 @@ export const PlatformOperation: FC<IProps> = (props) => {
       <Title className={classes.title} order={2}>
         Fonctionnement de la plateforme
       </Title>
-      <Group grow spacing={44} position="apart" noWrap>
+      <Group
+        grow
+        spacing={44}
+        position="apart"
+        className={classes.containerCard}
+      >
         <StrongPointsCard
           contentCard="Inscrivez-vous en tant qu’étudiant ou entreprise et renseignez vos informations personnelles."
           backgroundColor="#fff"
