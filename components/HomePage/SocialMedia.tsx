@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { IconBrandInstagram } from '@tabler/icons';
 import { colors } from '../../theme';
 import { FacebookIcon } from '../icons/FacebookIcon';
-import { TwitterIcon } from '../icons/TwitterIcon';
+import { LinkedinIcon } from '../icons/LinkedinIcon';
 
 interface IProps {}
 
@@ -39,9 +39,9 @@ export const SocialMedia: FC<IProps> = (props) => {
             <IconBrandInstagram size={80} color="#fff" />
           </a>
         </Link>
-        <Link href="https://twitter.com/NEXALT_app" passHref>
+        <Link href="https://www.linkedin.com/company/nexalt-app/" passHref>
           <a target="_blank" rel="noopener" className={classes.linkMedia}>
-            <TwitterIcon fontSize={80} color="#fff" />
+            <LinkedinIcon fontSize={80} color="#fff" />
           </a>
         </Link>
         <Link href="https://www.facebook.com/Nexaltapp" passHref>
