@@ -17,9 +17,11 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     gap: 10,
-    width: 371,
-    height: 223,
+    flex: '1 1 220px',
     padding: '35px !important',
+  },
+  icon: {
+    flexShrink: 0,
   },
 }));
 
@@ -34,7 +36,7 @@ export const StrongPointsCard: FC<IProps> = (props) => {
       className={classes.card}
       style={{ backgroundColor, boxShadow }}
     >
-      <IconSearch style={{ flexShrink: 0 }} size={40} color={iconColor} />
+      <IconSearch size={40} color={iconColor} className={classes.icon} />
       <Text color={textColor}>{contentCard}</Text>
     </Card>
   );

@@ -1,15 +1,7 @@
 import { FC } from 'react';
 
 import Image from 'next/image';
-import {
-  createStyles,
-  Footer as FooterApp,
-  Group,
-  List,
-  Stack,
-  Text,
-  Title,
-} from '@mantine/core';
+import { createStyles, Group, List, Stack, Text, Title } from '@mantine/core';
 import Link from 'next/link';
 
 interface IProps {}
@@ -20,9 +12,12 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
+    width: '100%',
+    position: 'relative',
     backgroundColor: 'transparent',
     borderTop: 'none',
     zIndex: 1,
+    gap: 30,
   },
   listStyle: {
     color: '#fff',
@@ -49,8 +44,8 @@ export const Footer: FC<IProps> = (props) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FooterApp height={270} className={classes.containerFooter}>
-      <Group spacing={120} align="flex-start" noWrap>
+    <footer className={classes.containerFooter}>
+      <Group spacing={120} align="flex-start">
         <Stack>
           <div>
             <Image
@@ -120,6 +115,6 @@ export const Footer: FC<IProps> = (props) => {
       <Text color="#fff" className={classes.copyright}>
         {`© ${currentYear} NEXALT. ALL RIGHT RESERVED.`}
       </Text>
-    </FooterApp>
+    </footer>
   );
 };

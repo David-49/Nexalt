@@ -1,10 +1,5 @@
 export const FormBottomHomePagePart2 = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1850.001"
-    height="1023"
-    viewBox="0 0 1850.001 1023"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1850.001 1023">
     <path
       id="Forme_du_bas"
       data-name="Forme du bas"

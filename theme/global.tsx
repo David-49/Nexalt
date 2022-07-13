@@ -9,7 +9,6 @@ export const GlobalStyles = () => (
       },
       body: {
         backgroundColor: colors.primaryBackgroundColor,
-        overflowX: 'hidden',
       },
     })}
   />
