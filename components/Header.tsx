@@ -7,6 +7,7 @@ import {
   createStyles,
   Group,
   Header as HeaderApp,
+  List,
 } from '@mantine/core';
 import { Logout } from './Authentification/Logout';
 import { useAuth } from '../context/AuthContext';
@@ -56,6 +57,12 @@ const useStyles = createStyles((theme) => ({
   containerButtons: {
     marginRight: 75,
   },
+  listNav: {
+    display: 'flex',
+    gap: 40,
+    listStyle: 'none',
+    alignItems: 'center',
+  },
 }));
 
 export const Header: FC<IProps> = (props) => {
@@ -98,23 +105,25 @@ export const Header: FC<IProps> = (props) => {
           </a>
         </Link>
         <nav>
-          <Group>
-            <li>
+          <List className={classes.listNav}>
+            <List.Item>
               <Link href="/about">
                 <a className={classes.labelNav}>Qui sommes-nous ?</a>
               </Link>
-            </li>
-            <li>
+            </List.Item>
+            <List.Item>
               <Link href="/prices">
                 <a className={classes.labelNav}>Offres et tarifs</a>
               </Link>
-            </li>
-            <li>
+            </List.Item>
+            <List.Item>
+
+
               <Link href="/blog">
                 <a className={classes.labelNav}>Ressources</a>
               </Link>
-            </li>
-          </Group>
+            </List.Item>
+          </List>
         </nav>
       </Group>
       <div className={classes.containerButtons}>

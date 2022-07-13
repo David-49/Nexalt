@@ -4,6 +4,7 @@ import { PasswordInput, Popover, Progress } from '@mantine/core';
 import { GetInputPropsPayload } from '@mantine/form/lib/types';
 import { UseFormReturnType } from '@mantine/form/lib/use-form';
 import { PasswordRequirement } from './PasswordRequirement';
+import { colors } from '../../theme';
 
 interface IProps {
   label?: string;
@@ -66,6 +67,15 @@ export const PasswordStrength: FC<IProps> = (props) => {
       onBlurCapture={() => setPopoverOpened(false)}
       target={
         <PasswordInput
+          styles={{
+            input: {
+              borderWidth: 2,
+              ':focus-within': {
+                borderWidth: 2,
+                borderColor: colors.primaryBlue,
+              },
+            },
+          }}
           variant="filled"
           required
           size="xl"

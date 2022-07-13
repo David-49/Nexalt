@@ -143,8 +143,6 @@ const useStyles = createStyles((theme) => ({
   containerFooter: {
     backgroundColor: colors.secondaryBlue,
     width: '95%',
-    paddingLeft: 150,
-    paddingRight: 50,
     paddingTop: 60,
     borderTopRightRadius: 50,
     paddingBottom: 40,
