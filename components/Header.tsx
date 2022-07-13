@@ -117,6 +117,8 @@ export const Header: FC<IProps> = (props) => {
               </Link>
             </List.Item>
             <List.Item>
+
+
               <Link href="/blog">
                 <a className={classes.labelNav}>Ressources</a>
               </Link>
