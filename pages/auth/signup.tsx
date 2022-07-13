@@ -97,15 +97,21 @@ const useStyles = createStyles((theme) => ({
     fontFamily: 'Montserrat',
   },
   connectionBtn: {
-    height: 46,
+    fontWeight: 400,
     fontSize: 16,
     backgroundColor: colors.primaryBlue,
+    ':hover': {
+      backgroundColor: colors.secondaryBlue,
+    },
   },
   inscriptionBtn: {
     fontSize: 20,
     backgroundColor: colors.primaryBlue,
     width: '100%',
-    height: 65,
+    fontWeight: 400,
+    ':hover': {
+      backgroundColor: colors.secondaryBlue,
+    },
   },
   form: {
     display: 'flex',
@@ -208,6 +214,7 @@ const SignUp: NextPage<IProps> = (props) => {
             <Link href="/auth/signin" passHref>
               <Button
                 component="a"
+                size="lg"
                 radius={10}
                 className={classes.connectionBtn}
               >
@@ -262,6 +269,7 @@ const SignUp: NextPage<IProps> = (props) => {
               radius={15}
               type="submit"
               mt={30}
+              size="lg"
               className={classes.inscriptionBtn}
             >
               M'inscrire
