@@ -98,7 +98,7 @@ export const Header: FC<IProps> = (props) => {
           </a>
         </Link>
         <nav>
-          <Group>
+          <Group spacing={40}>
             <li>
               <Link href="/about">
                 <a className={classes.labelNav}>Qui sommes-nous ?</a>
