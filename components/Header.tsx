@@ -105,12 +105,12 @@ export const Header: FC<IProps> = (props) => {
               </Link>
             </li>
             <li>
-              <Link href="/plans">
+              <Link href="/prices">
                 <a className={classes.labelNav}>Offres et tarifs</a>
               </Link>
             </li>
             <li>
-              <Link href="/resources">
+              <Link href="/blog">
                 <a className={classes.labelNav}>Ressources</a>
               </Link>
             </li>
