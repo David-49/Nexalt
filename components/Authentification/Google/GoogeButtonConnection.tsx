@@ -4,6 +4,7 @@ import { Button, createStyles } from '@mantine/core';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../../context/AuthContext';
 import LogosGoogleIcon from './LogosGoogleIcon';
+import { colors } from '../../../theme';
 
 interface IProps {
   label: string;
@@ -14,6 +15,10 @@ const useStyles = createStyles((theme) => ({
     color: '#a7a4b4',
     marginBottom: 50,
     fontWeight: 'normal',
+    ':hover': {
+      backgroundColor: colors.secondaryBlue,
+      color: '#fff',
+    },
   },
 }));
 
