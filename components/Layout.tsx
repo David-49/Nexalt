@@ -2,14 +2,11 @@ import { FC } from 'react';
 
 import { AppShell, createStyles } from '@mantine/core';
 import { Header } from './Header';
-import { Footer } from './Footer';
 
 interface IProps {}
 
 const useStyles = createStyles((theme) => ({
   containerAppShell: {
-    paddingLeft: '150px',
-    paddingRight: '150px',
     width: '100%',
   },
 }));
@@ -21,7 +18,6 @@ export const Layout: FC<IProps> = (props) => {
     <AppShell
       className={classes.containerAppShell}
       header={<Header />}
-      footer={<Footer />}
       padding={0}
       styles={{
         main: { width: '100%' },
