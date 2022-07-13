@@ -6,10 +6,12 @@ import { UseFormReturnType } from '@mantine/form/lib/use-form';
 import { PasswordRequirement } from './PasswordRequirement';
 
 interface IProps {
-  label: string;
-  description: string;
+  label?: string;
+  description?: string;
   placeholder: string;
   formData: UseFormReturnType<{
+    firstname: string;
+    lastname: string;
     email: string;
     password: string;
     confirm: string;
@@ -64,7 +66,10 @@ export const PasswordStrength: FC<IProps> = (props) => {
       onBlurCapture={() => setPopoverOpened(false)}
       target={
         <PasswordInput
+          variant="filled"
           required
+          size="xl"
+          radius={15}
           label={label}
           placeholder={placeholder}
           description={description}

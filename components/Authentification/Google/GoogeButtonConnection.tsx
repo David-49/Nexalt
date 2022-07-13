@@ -1,17 +1,31 @@
 import { FC } from 'react';
 
-import { Button } from '@mantine/core';
+import { Button, createStyles } from '@mantine/core';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../../context/AuthContext';
 import LogosGoogleIcon from './LogosGoogleIcon';
+import { colors } from '../../../theme';
 
 interface IProps {
   label: string;
 }
 
+const useStyles = createStyles((theme) => ({
+  btn: {
+    color: '#a7a4b4',
+    marginBottom: 50,
+    fontWeight: 'normal',
+    ':hover': {
+      backgroundColor: colors.secondaryBlue,
+      color: '#fff',
+    },
+  },
+}));
+
 export const GoogleButtonConnection: FC<IProps> = (props) => {
   const { label } = props;
   const router = useRouter();
+  const { classes } = useStyles();
   const { signInWithGoogle } = useAuth();
 
   const handleSignupWithGoogle = async () => {
@@ -21,9 +35,13 @@ export const GoogleButtonConnection: FC<IProps> = (props) => {
 
   return (
     <Button
-      variant="outline"
-      leftIcon={<LogosGoogleIcon />}
+      radius={10}
+      variant="filled"
+      leftIcon={<LogosGoogleIcon fontSize={30} />}
       onClick={handleSignupWithGoogle}
+      fullWidth
+      className={classes.btn}
+      size="lg"
     >
       {label}
     </Button>

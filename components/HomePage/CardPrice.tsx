@@ -56,8 +56,8 @@ export const CardPrice: FC<IProps> = (props) => {
         {price} €
       </Text>
       <Group direction="column">
-        {listData.map((item) => (
-          <Group>
+        {listData.map((item, index) => (
+          <Group key={index}>
             <Checked />
             {item}
           </Group>

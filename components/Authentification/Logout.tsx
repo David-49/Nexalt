@@ -8,10 +8,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: colors.secondaryBlue,
     textTransform: 'uppercase',
     fontSize: 16,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 22,
-    paddingRight: 22,
+    height: 46,
   },
 }));
 
