@@ -34,6 +34,12 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'stretch',
   },
+  input: {
+    borderWidth: 2,
+    ':focus': {
+      borderColor: colors.primaryBlue,
+    },
+  },
   leftChild: {
     display: 'flex',
     flexDirection: 'column',
@@ -228,6 +234,7 @@ const SignUp: NextPage<IProps> = (props) => {
           >
             <Group grow>
               <TextInput
+                classNames={{ input: classes.input }}
                 radius={15}
                 required
                 placeholder="Prénom"
@@ -236,6 +243,7 @@ const SignUp: NextPage<IProps> = (props) => {
                 {...form.getInputProps('firstname')}
               />
               <TextInput
+                classNames={{ input: classes.input }}
                 radius={15}
                 required
                 placeholder="Nom"
@@ -245,6 +253,7 @@ const SignUp: NextPage<IProps> = (props) => {
               />
             </Group>
             <TextInput
+              classNames={{ input: classes.input }}
               radius={15}
               required
               placeholder="Email"
@@ -258,6 +267,15 @@ const SignUp: NextPage<IProps> = (props) => {
               formMethods={form.getInputProps('password')}
             />
             <PasswordInput
+              styles={{
+                input: {
+                  borderWidth: 2,
+                  ':focus-within': {
+                    borderWidth: 2,
+                    borderColor: colors.primaryBlue,
+                  },
+                },
+              }}
               radius={15}
               size="xl"
               required

@@ -230,6 +230,15 @@ const SignIn: NextPage<IProps> = (props) => {
           >
             <TextInput
               placeholder="Adresse mail"
+              styles={{
+                input: {
+                  borderWidth: 2,
+                  ':focus': {
+                    borderWidth: 2,
+                    borderColor: colors.primaryBlue,
+                  },
+                },
+              }}
               radius={15}
               required
               variant="filled"
@@ -238,6 +247,15 @@ const SignIn: NextPage<IProps> = (props) => {
             />
             <PasswordInput
               placeholder="Mot de passe"
+              styles={{
+                input: {
+                  borderWidth: 2,
+                  ':focus-within': {
+                    borderWidth: 2,
+                    borderColor: colors.primaryBlue,
+                  },
+                },
+              }}
               required
               radius={15}
               variant="filled"
