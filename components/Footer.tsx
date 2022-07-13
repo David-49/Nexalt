@@ -3,6 +3,10 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { createStyles, Group, List, Stack, Text, Title } from '@mantine/core';
 import Link from 'next/link';
+import { IconBrandInstagram } from '@tabler/icons';
+import { LinkedinIcon } from './icons/LinkedinIcon';
+import { FacebookIcon } from './icons/FacebookIcon';
+import { colors } from '../theme';
 
 interface IProps {}
 
@@ -12,17 +16,20 @@ const useStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
-    width: '100%',
     position: 'relative',
     backgroundColor: 'transparent',
     borderTop: 'none',
     zIndex: 1,
-    gap: 30,
+    gap: 50,
+    width: '100%',
+    paddingLeft: 150,
+    paddingRight: 150,
   },
   listStyle: {
     color: '#fff',
     fontSize: 20,
     marginTop: 30,
+    listStyle: 'none',
   },
   title: {
     color: '#fff',
@@ -36,6 +43,14 @@ const useStyles = createStyles((theme) => ({
   copyright: {
     fontSize: 18,
   },
+  linkMedia: {
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 8,
+  },
 }));
 
 export const Footer: FC<IProps> = (props) => {
@@ -45,7 +60,12 @@ export const Footer: FC<IProps> = (props) => {
 
   return (
     <footer className={classes.containerFooter}>
-      <Group spacing={120} align="flex-start">
+      <Group
+        spacing={120}
+        align="flex-start"
+        position="apart"
+        style={{ width: '100%' }}
+      >
         <Stack>
           <div>
             <Image
@@ -112,9 +132,28 @@ export const Footer: FC<IProps> = (props) => {
           </List>
         </Stack>
       </Group>
-      <Text color="#fff" className={classes.copyright}>
-        {`© ${currentYear} NEXALT. ALL RIGHT RESERVED.`}
-      </Text>
+      <Group position="apart" style={{ width: '100%' }}>
+        <Text color="#fff" className={classes.copyright}>
+          {`© ${currentYear} NEXALT. ALL RIGHT RESERVED.`}
+        </Text>
+        <Group spacing={25}>
+          <Link href="https://www.instagram.com/nexalt_app/" passHref>
+            <a target="_blank" rel="noopener" className={classes.linkMedia}>
+              <IconBrandInstagram size={20} color={colors.primaryBlue} />
+            </a>
+          </Link>
+          <Link href="https://www.linkedin.com/company/nexalt-app/" passHref>
+            <a target="_blank" rel="noopener" className={classes.linkMedia}>
+              <LinkedinIcon fontSize={20} color={colors.primaryBlue} />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/Nexaltapp" passHref>
+            <a target="_blank" rel="noopener" className={classes.linkMedia}>
+              <FacebookIcon color={colors.primaryBlue} fontSize={20} />
+            </a>
+          </Link>
+        </Group>
+      </Group>
     </footer>
   );
 };
