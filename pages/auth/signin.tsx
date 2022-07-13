@@ -189,10 +189,10 @@ const SignIn: NextPage<IProps> = (props) => {
         </Link>
         <Text color="#fff" className={classes.text}>
           <span className={classes.heightSpan} style={{ fontWeight: 800 }}>
-            Étudiants,
+            Entreprises,
           </span>
-          <span className={classes.heightSpan}>Accédez à de</span>
-          <span className={classes.heightSpan}> nouvelles opportunités</span>
+          <span className={classes.heightSpan}>Trouver votre</span>
+          <span className={classes.heightSpan}> prochaine perle rare</span>
         </Text>
       </div>
       <div className={classes.rightChild}>
