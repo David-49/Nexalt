@@ -44,13 +44,11 @@ const useStyles = createStyles((theme) => ({
   },
   signInBtn: {
     backgroundColor: colors.secondaryBlue,
-    textTransform: 'uppercase',
     fontSize: 16,
     height: 46,
   },
   signUpBtn: {
     backgroundColor: colors.primaryBlue,
-    textTransform: 'uppercase',
     fontSize: 16,
     height: 46,
   },
@@ -78,6 +76,7 @@ export const Header: FC<IProps> = (props) => {
             <Button
               size="md"
               radius="md"
+              uppercase
               className={
                 item.id === 'signin' ? classes.signInBtn : classes.signUpBtn
               }
@@ -117,8 +116,6 @@ export const Header: FC<IProps> = (props) => {
               </Link>
             </List.Item>
             <List.Item>
-
-
               <Link href="/blog">
                 <a className={classes.labelNav}>Ressources</a>
               </Link>

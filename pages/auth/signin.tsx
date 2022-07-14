@@ -110,16 +110,21 @@ const useStyles = createStyles((theme) => ({
     fontSize: 20,
     width: '100%',
     backgroundColor: colors.primaryBlue,
+    transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: colors.secondaryBlue,
+      transition: 'ease 0.3s',
     },
   },
   inscriptionBtn: {
     fontSize: 16,
     backgroundColor: colors.primaryBlue,
     fontWeight: 400,
+    transition: 'ease 0.3s',
+
     ':hover': {
       backgroundColor: colors.secondaryBlue,
+      transition: 'ease 0.3s',
     },
   },
   form: {
@@ -239,7 +244,6 @@ const SignIn: NextPage<IProps> = (props) => {
                   },
                 },
               }}
-
               radius={15}
               required
               variant="filled"
@@ -257,7 +261,6 @@ const SignIn: NextPage<IProps> = (props) => {
                   },
                 },
               }}
-
               required
               radius={15}
               variant="filled"
