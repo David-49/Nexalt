@@ -1,10 +1,10 @@
 import { ReactElement, ReactNode } from 'react';
 
+import {Container, createStyles} from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
-import {Container, createStyles} from "@mantine/core";
 import { colors } from '../theme';
 
 type HomePageWithLayout = NextPage & {
@@ -460,7 +460,7 @@ const Dashboard: HomePageWithLayout = () => {
                 <h1 className={classes.title}>Tableau de bord</h1>
                 <ul className={classes.boardMenu}>
                     <li className={classes.liActiveBoardMenu}>
-                        <Link href={"#notifications"}>
+                        <Link href="#notifications">
                             <a className={classes.linkActiveBoardMenu}>
                                 <svg className={classes.svgActiveLinkBoardMenu} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -478,7 +478,7 @@ const Dashboard: HomePageWithLayout = () => {
                         </Link>
                     </li>
                     <li className={classes.liBoardMenu}>
-                        <Link href={"#visibility"}>
+                        <Link href="#visibility">
                             <a className={classes.linkBoardMenu}>
                                 <svg className={classes.svgLinkBoardMenu} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -495,7 +495,7 @@ const Dashboard: HomePageWithLayout = () => {
                         </Link>
                     </li>
                     <li className={classes.liBoardMenu}>
-                        <Link href={"#statistics"}>
+                        <Link href="#statistics">
                             <a className={classes.linkBoardMenu}>
                                 <svg className={classes.svgLinkBoardMenu} version="1.1" id="Icon_ionic-ios-stats" xmlns="http://www.w3.org/2000/svg"
                                      xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -515,7 +515,7 @@ const Dashboard: HomePageWithLayout = () => {
                         </Link>
                     </li>
                     <li className={classes.liBoardMenu}>
-                        <Link href={"#keywords"}>
+                        <Link href="#keywords">
                             <a className={classes.linkBoardMenu}>
                                 <svg className={classes.svgLinkBoardMenu} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -531,7 +531,7 @@ const Dashboard: HomePageWithLayout = () => {
                         </Link>
                     </li>
                     <li className={classes.liBoardMenu}>
-                        <Link href={"#views"}>
+                        <Link href="#views">
                             <a className={classes.linkBoardMenu}>
                                 <svg className={classes.svgLinkBoardMenu} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                      xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -602,7 +602,7 @@ const Dashboard: HomePageWithLayout = () => {
                                 </svg>
                                 <span className={classes.titleContentOne}>Votre profil à été vu par une personne</span>
                             </div>
-                            <Link href={""}>
+                            <Link href="">
                                 <a  className={classes.buttonPremium}>
                                     <svg className={classes.svgButtonPremium} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -670,7 +670,7 @@ const Dashboard: HomePageWithLayout = () => {
                                 </svg>
                                 <span className={classes.titleContentOne}>Votre profil à été vu par deux personnes</span>
                             </div>
-                            <Link href={""}>
+                            <Link href="">
                                 <a className={classes.buttonPremium}>
                                     <svg className={classes.svgButtonPremium}  version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -810,7 +810,7 @@ const Dashboard: HomePageWithLayout = () => {
                     </div>
                     <div className={classes.graph}>
                         <Image
-                            src="/assets/images/graph.jpg" alt={''}
+                            src="/assets/images/graph.jpg" alt=''
                             width='1317'
                             height='410'
                         />

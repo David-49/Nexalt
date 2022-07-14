@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
+import { createStyles } from '@mantine/core';
 import Image from 'next/image';
 import Link from "next/link";
-import { createStyles } from '@mantine/core';
+
 import { colors } from '../theme';
 
 interface IProps {}
@@ -106,7 +107,7 @@ export const AppLayout: FC<IProps> = (props) => {
         <>
             <header className={classes.headerLogged}>
                 <div className={classes.headerInner}>
-                    <Link href={"/index"}>
+                    <Link href="/index">
                         <a>
                             <svg className={classes.logoE} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                  xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -129,7 +130,7 @@ export const AppLayout: FC<IProps> = (props) => {
                     <nav className={classes.navMenu}>
                         <ul className={classes.firstMenu}>
                             <li className={classes.activeMenu}>
-                                <Link href={"dashboard"}>
+                                <Link href="dashboard">
                                     <a className={classes.menuLink}>
                                     <svg className={classes.menuIconActive} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -145,7 +146,7 @@ export const AppLayout: FC<IProps> = (props) => {
                             </li>
 
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                 <a className={classes.menuLink}>
                                     <svg className={classes.menuIcon} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -161,7 +162,7 @@ export const AppLayout: FC<IProps> = (props) => {
                                 </Link>
                             </li>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg className={classes.menuIcon} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -176,7 +177,7 @@ export const AppLayout: FC<IProps> = (props) => {
                                 </Link>
                             </li>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg className={classes.menuIcon}  version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -192,7 +193,7 @@ export const AppLayout: FC<IProps> = (props) => {
                                 </Link>
                             </li>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg className={classes.menuIcon}  version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -210,7 +211,7 @@ export const AppLayout: FC<IProps> = (props) => {
                                 </Link>
                             </li>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg className={classes.menuIcon} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -245,7 +246,7 @@ export const AppLayout: FC<IProps> = (props) => {
                         </ul>
                         <ul className={classes.firstMenu}>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg version="1.1" className={classes.menuIcon} id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -267,7 +268,7 @@ export const AppLayout: FC<IProps> = (props) => {
                                 </Link>
                             </li>
                             <li className={classes.liMenu}>
-                                <Link href={""}>
+                                <Link href="">
                                     <a className={classes.menuLink}>
                                         <svg version="1.1" className={classes.menuIcon} id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
