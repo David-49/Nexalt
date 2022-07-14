@@ -948,7 +948,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Ngom<br/>Gora</span>
                                 </a>
                             </Link>
                         </li>
@@ -964,7 +964,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Frigant<br/>Caroline</span>
                                 </a>
                             </Link>
                         </li>
@@ -980,7 +980,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Nadine<br/>Bertrand</span>
                                 </a>
                             </Link>
                         </li>
@@ -996,7 +996,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Amal<br/>Thomas</span>
                                 </a>
                             </Link>
                         </li>
@@ -1012,7 +1012,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Farrel<br/>Vivien</span>
                                 </a>
                             </Link>
                         </li>
@@ -1028,7 +1028,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Johnson<br/>Jim</span>
                                 </a>
                             </Link>
                         </li>
@@ -1044,7 +1044,7 @@ const Dashboard: HomePageWithLayout = () => {
                                             />
                                         </div>
                                     </div>
-                                    <span>Couteau<br/>Emmanuel</span>
+                                    <span>Fardeau<br/>Xavier</span>
                                 </a>
                             </Link>
                         </li>
