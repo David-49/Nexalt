@@ -1,11 +1,11 @@
 import { ReactElement, ReactNode } from 'react';
 
 import Image from "next/image";
+import Link from "next/link";
 import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
 import {Container, createStyles} from "@mantine/core";
 import { colors } from '../theme';
-import Link from "next/link";
 
 type HomePageWithLayout = NextPage & {
     getLayout: (page: ReactElement) => ReactNode;
