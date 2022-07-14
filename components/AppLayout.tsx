@@ -1,9 +1,10 @@
 import { FC } from 'react';
 
+import Image from 'next/image';
 import { createStyles } from '@mantine/core';
 import { colors } from '../theme';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 interface IProps {}
 

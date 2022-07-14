@@ -1,11 +1,11 @@
 import { ReactElement, ReactNode } from 'react';
 
+import Image from "next/image";
 import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
 import {Container, createStyles} from "@mantine/core";
 import { colors } from '../theme';
 import Link from "next/link";
-import Image from "next/image";
 
 type HomePageWithLayout = NextPage & {
     getLayout: (page: ReactElement) => ReactNode;
@@ -1058,11 +1058,9 @@ const Dashboard: HomePageWithLayout = () => {
 
 Dashboard.getLayout = function getLayout(page: ReactElement) {
     return (
-        <>
-            <AppLayout>
-            {page}
-            </AppLayout>
-        </>
+        <AppLayout>
+        {page}
+        </AppLayout>
     );
 };
 
