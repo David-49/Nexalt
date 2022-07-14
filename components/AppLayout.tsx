@@ -107,7 +107,7 @@ export const AppLayout: FC<IProps> = (props) => {
         <>
             <header className={classes.headerLogged}>
                 <div className={classes.headerInner}>
-                    <Link href="/index">
+                    <Link href="/">
                         <a>
                             <svg className={classes.logoE} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                  xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
