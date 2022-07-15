@@ -300,6 +300,7 @@ const useStyles = createStyles( ({
 }));
 
 const Research: HomePageWithLayout = () => {
+
     const {classes} = useStyles();
 
     return (
