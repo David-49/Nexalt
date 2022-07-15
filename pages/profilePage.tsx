@@ -489,7 +489,7 @@ const useStyles = createStyles( ({
         },
     },
     fill: {
-        backgroundColor: colors.primaryBlue + '!important',
+        backgroundColor: `${colors.primaryBlue} !important`,
     },
     experiencesContent: {
         display: 'flex',
