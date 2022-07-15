@@ -460,8 +460,6 @@ const useStyles = createStyles( ({
 const Dashboard: HomePageWithLayout = () => {
     const {classes} = useStyles();
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <Container fluid className={classes.containerPage}>
         <section className={classes.board}>

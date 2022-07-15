@@ -302,30 +302,28 @@ const useStyles = createStyles( ({
 const Research: HomePageWithLayout = () => {
     const {classes} = useStyles();
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <Container fluid className={classes.containerPage}>
             <section className={classes.filter}>
                 <div className={classes.filterInner}>
                     <h1 className={classes.title}>Filtres de recherche</h1>
                     <form className={classes.filters}>
-                        <label className={classes.filtersLabel}>
-                            <input className={classes.filtersInput} type="text" placeholder="Localisation..."/>
+                        <label className={classes.filtersLabel} htmlFor="localisation">
+                            <input className={classes.filtersInput} name="localisation" id="localisation" type="text" placeholder="Localisation..."/>
                         </label>
-                        <label className={classes.filtersLabel}>
-                            <input className={classes.filtersInput} type="text" placeholder="Poste..."/>
+                        <label className={classes.filtersLabel} htmlFor="poste">
+                            <input className={classes.filtersInput} name="poste" id="poste" type="text" placeholder="Poste..."/>
                         </label>
-                        <label className={classes.filtersLabel}>
-                            <input className={classes.filtersInput} type="text" placeholder="Année d'étude..."/>
+                        <label className={classes.filtersLabel} htmlFor="schoolYear">
+                            <input className={classes.filtersInput} name="schoolYear" id="schoolYear" type="text" placeholder="Année d'étude..."/>
                         </label>
-                        <label className={classes.filtersLabel}>
-                            <input className={classes.filtersInput} type="text" placeholder="Durée de contrat..."/>
+                        <label className={classes.filtersLabel} htmlFor="timeContract">
+                            <input className={classes.filtersInput} name="timeContract" id="timeContract" type="text" placeholder="Durée de contrat..."/>
                         </label>
-                        <label className={classes.filtersLabel}>
-                            <input className={classes.filtersInput} type="text" placeholder="Compétences..."/>
+                        <label className={classes.filtersLabel} htmlFor="skills">
+                            <input className={classes.filtersInput} name="skills" id="skills" type="text" placeholder="Compétences..."/>
                         </label>
-                        <button className={classes.filterSearchButton}>
+                        <button className={classes.filterSearchButton} type="submit">
                             <svg className={classes.svgFilterSearchButton} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                  xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  viewBox="0 0 22.4 22.4"
