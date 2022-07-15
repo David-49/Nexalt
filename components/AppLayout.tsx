@@ -146,7 +146,7 @@ export const AppLayout: FC<IProps> = (props) => {
                             </li>
 
                             <li className={classes.liMenu}>
-                                <Link href="">
+                                <Link href="research">
                                 <a className={classes.menuLink}>
                                     <svg className={classes.menuIcon} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                                          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
