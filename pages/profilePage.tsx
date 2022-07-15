@@ -923,41 +923,41 @@ const ProfilePage: HomePageWithLayout = () => {
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Graphisme</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Charte graphique</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={classes.bar}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={classes.bar}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Webdesign</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={classes.bar}></div>
-                                                <div className={classes.bar}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={classes.bar}/>
+                                                <div className={classes.bar}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Branding</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>UI Design</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
                                             </div>
                                         </li>
                                     </ul>
@@ -965,41 +965,41 @@ const ProfilePage: HomePageWithLayout = () => {
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>UX Design</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Infographie</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={classes.bar}></div>
-                                                <div className={classes.bar}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={classes.bar}/>
+                                                <div className={classes.bar}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Motion Design</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={classes.bar}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={classes.bar}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Intégration Web</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={classes.bar}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={classes.bar}/>
                                             </div>
                                         </li>
                                         <li className={classes.skillsLi}>
                                             <span className={classes.skillName}>Affiches</span>
                                             <div className={classes.skillBar}>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
-                                                <div className={`${classes.bar} ${classes.fill}`}></div>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
+                                                <div className={`${classes.bar} ${classes.fill}`}/>
                                             </div>
                                         </li>
                                     </ul>
