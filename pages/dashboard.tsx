@@ -69,6 +69,9 @@ const useStyles = createStyles( ({
         paddingLeft: 20,
         width: '100%',
         listStyle: "none",
+        '@media (max-width: 1820px)': {
+            width: '72%',
+        },
         '@media (max-width: 1700px)': {
             width: '72%',
         },
@@ -106,6 +109,12 @@ const useStyles = createStyles( ({
         paddingBottom: 15,
         paddingLeft: 20,
         listStyle: "none",
+        '@media (max-width: 1820px)': {
+            width: '72%',
+        },
+        '@media (max-width: 1700px)': {
+            width: '72%',
+        },
     },
     linkActiveBoardMenu: {
         display: 'flex',
