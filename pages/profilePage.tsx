@@ -713,7 +713,6 @@ const useStyles = createStyles( ({
         fontWeight: 400,
         color: colors.blackText,
     },
-
 }));
 
 const ProfilePage: HomePageWithLayout = () => {
