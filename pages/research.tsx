@@ -96,6 +96,9 @@ const useStyles = createStyles( ({
         marginTop: 7.5,
         border: 'none',
         cursor: 'pointer',
+        '@media (max-width: 1820px)': {
+            width: '72%',
+        },
     },
     svgFilterSearchButton: {
         width: 20,
