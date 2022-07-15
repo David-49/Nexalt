@@ -446,7 +446,7 @@ const useStyles = createStyles( ({
         top: -10,
     },
     p18: {
-        top: -10,
+        top: -25,
     },
     p19: {
         top: -30,
@@ -933,7 +933,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p13}>
+                                        <div className={`${classes.profileImg} ${classes.p13}`}>
                                             <Image
                                                 src="/assets/images/photo_13.jpg"
                                                 width={400}
@@ -949,7 +949,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p14}>
+                                        <div className={`${classes.profileImg} ${classes.p14}`}>
                                             <Image
                                                 src="/assets/images/photo_14.jpg"
                                                 width={400}
@@ -965,7 +965,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p15}>
+                                        <div className={`${classes.profileImg} && ${classes.p15}`}>
                                             <Image
                                                 src="/assets/images/photo_15.jpg"
                                                 width={400}
@@ -981,7 +981,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p16}>
+                                        <div className={`${classes.profileImg} && ${classes.p16}`}>
                                             <Image
                                                 src="/assets/images/photo_16.jpg"
                                                 width={400}
@@ -997,7 +997,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p17}>
+                                        <div className={`${classes.profileImg} && ${classes.p17}`}>
                                             <Image
                                                 src="/assets/images/photo_17.jpg"
                                                 width={400}
@@ -1013,7 +1013,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p18}>
+                                        <div className={`${classes.profileImg} && ${classes.p18}`}>
                                             <Image
                                                 src="/assets/images/photo_18.jpg"
                                                 width={400}
@@ -1029,7 +1029,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p19}>
+                                        <div className={`${classes.profileImg} && ${classes.p19}`}>
                                             <Image
                                                 src="/assets/images/photo_19.jpg"
                                                 width={400}
@@ -1045,7 +1045,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p20}>
+                                        <div className={`${classes.profileImg} && ${classes.p20}`}>
                                             <Image
                                                 src="/assets/images/photo_20.jpg"
                                                 width={400}
