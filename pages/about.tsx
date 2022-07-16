@@ -237,12 +237,12 @@ const About: NextPage<IProps> = () => {
                                 Nous souhaitons aider les étudiants, comme nous, à trouver une alternance plus facilement et plus rapidement tout en éclairant les entreprises sur les possibilités de recrutement.
                             </Text>
                             <div className={classes.buttons}>
-                                <Link href="">
+                                <Link href="/signup">
                                     <a className={classes.btn1}>
                                         je créé mon profil
                                     </a>
                                 </Link>
-                                <Link href="">
+                                <Link href="/prices">
                                     <a className={classes.btn2}>
                                         voir les prix
                                     </a>

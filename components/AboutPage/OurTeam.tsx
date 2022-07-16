@@ -346,7 +346,7 @@ export const OurTeam: FC<IProps> = () => {
                   </Link>
                 </li>
                 <li className={classes.network}>
-                  <Link href="https://www.instagram.com/daviddognin/">
+                  <Link href="https://www.instagram.com/sandymartin_portfolio/">
                     <a className={classes.networkLink}>
                       <svg className={classes.svgNetwork}  version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            viewBox="0 0 30 30" xmlSpace="preserve">
@@ -386,7 +386,7 @@ export const OurTeam: FC<IProps> = () => {
               </div>
               <div className={classes.content}>
                 <span className={classes.teamName}>David DOGNIN</span>
-                <span className={classes.teamJob}>Bachelor WebDéveloppement</span>
+                <span className={classes.teamJob}>Bachelor Web development</span>
               </div>
               <ul className={classes.socialNetworks}>
                 <li className={classes.network}>
@@ -402,7 +402,7 @@ export const OurTeam: FC<IProps> = () => {
                   </Link>
                 </li>
                 <li className={classes.network}>
-                  <Link href="https://www.facebook.com/david.dognin">
+                  <Link href="https://www.instagram.com/daviddognin/">
                     <a className={classes.networkLink}>
                       <svg className={classes.svgNetwork}  version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            viewBox="0 0 30 30" xmlSpace="preserve">
@@ -420,7 +420,7 @@ export const OurTeam: FC<IProps> = () => {
                   </Link>
                 </li>
                 <li className={classes.network}>
-                  <Link href="">
+                  <Link href="https://www.facebook.com/david.dognin">
                     <a className={classes.networkLink}>
                       <svg className={classes.svgNetwork} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                            viewBox="0 0 30 30" xmlSpace="preserve">
