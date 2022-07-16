@@ -174,7 +174,7 @@ const SignUp: NextPage<IProps> = (props) => {
     try {
       await signup(data.email, data.password);
       setIsInscriptionFailed(false);
-      router.push('/');
+      router.push('/account_configuration');
     } catch (err: any) {
       setIsInscriptionFailed(true);
     }

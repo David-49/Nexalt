@@ -32,7 +32,7 @@ export const GoogleButtonConnection: FC<IProps> = (props) => {
 
   const handleSignupWithGoogle = async () => {
     await signInWithGoogle();
-    router.push('/');
+    router.push('/account_configuration');
   };
 
   return (
