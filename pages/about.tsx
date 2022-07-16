@@ -201,7 +201,7 @@ const About: NextPage<IProps> = () => {
     return (
         <Container fluid className={classes.containerPage}>
             <Head>
-                <title>Offres et tarifs</title>
+                <title>Qui sommes-nous ?</title>
                 <meta name="description" content="NVous pourrez retrouver toutes les offres et tarifs proposés par nexalt" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -237,12 +237,12 @@ const About: NextPage<IProps> = () => {
                                 Nous souhaitons aider les étudiants, comme nous, à trouver une alternance plus facilement et plus rapidement tout en éclairant les entreprises sur les possibilités de recrutement.
                             </Text>
                             <div className={classes.buttons}>
-                                <Link href="">
+                                <Link href="/auth/signup">
                                     <a className={classes.btn1}>
                                         je créé mon profil
                                     </a>
                                 </Link>
-                                <Link href="">
+                                <Link href="/prices">
                                     <a className={classes.btn2}>
                                         voir les prix
                                     </a>
