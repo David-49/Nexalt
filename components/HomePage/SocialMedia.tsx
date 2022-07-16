@@ -11,6 +11,7 @@ interface IProps {}
 
 const useStyles = createStyles((theme) => ({
   title: {
+    fontFamily: 'Poppins, sans-serif',
     fontSize: 40,
     fontWeight: 800,
     marginBottom: 80,
@@ -22,6 +23,11 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 8,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: '#725FFE',
+      transition: 'background-color .2s',
+    },
   },
 }));
 

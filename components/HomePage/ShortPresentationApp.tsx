@@ -9,9 +9,10 @@ interface IProps {}
 
 const useStyles = createStyles((theme) => ({
   title: {
+    fontFamily: 'Poppins, sans-serif',
     fontWeight: 800,
     fontSize: 40,
-    width: '60%',
+    width: '70%',
     textAlign: 'center',
     marginBottom: 60,
   },
@@ -27,6 +28,12 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: colors.primaryBlue,
     height: 64,
     boxShadow: '0px 5px 15px #0000001A',
+    fontWeight: 800,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: '#725FFE',
+      transition: 'background-color .2s',
+    },
   },
   containerCard: {
     alignItems: 'stretch',
@@ -51,24 +58,19 @@ export const ShortPresentation: FC<IProps> = (props) => {
         <StrongPointsCard
           backgroundColor="#fff"
           iconColor={colors.primaryBlue}
-          contentCard="Trouvez facilement des alternants pour votre entreprise et contactez gratuitement les profils vérifiés de votre choix."
+          contentCard="Renseignez vos informations en complétant tous les champs, pour une meilleure optimisation de votre profil."
           textColor="#0F0C29"
           boxShadow="0px 5px 14px #0000001A"
         />
         <StrongPointsCard
           backgroundColor="#fff"
           iconColor={colors.primaryBlue}
-          contentCard="Trouvez facilement des alternants pour votre entreprise et contactez gratuitement les profils vérifiés de votre choix."
+          contentCard="Nous offrons des conseils provenant de nos experts pour parfaire vos documents tels que votre lettre de motivation, cv…"
           textColor="#0F0C29"
           boxShadow="0px 5px 14px #0000001A"
         />
       </Group>
       <Group spacing={40} style={{ marginTop: 70 }}>
-        <Link href="/explications" passHref>
-          <Button component="a" radius={10} className={classes.firstBtn}>
-            COMMENT ÇA MARCHE ?
-          </Button>
-        </Link>
         <Link href="/auth/signup" passHref>
           <Button component="a" radius={10} className={classes.secondBtn}>
             JE CRÉÉ MON PROFIL

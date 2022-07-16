@@ -33,6 +33,7 @@ const useStyles = createStyles((theme) => ({
   },
   title: {
     color: '#fff',
+    fontFamily: 'Poppins, sans-serif',
     fontSize: 30,
     fontWeight: 800,
   },
@@ -50,6 +51,12 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 8,
+    transform: 'scale(1)',
+    transition: 'transform .2s',
+    ':hover': {
+      transform: 'scale(1.2)',
+      transition: 'transform .2s',
+    }
   },
 }));
 
@@ -61,7 +68,7 @@ export const Footer: FC<IProps> = (props) => {
   return (
     <footer className={classes.containerFooter}>
       <Group
-        spacing={120}
+        spacing={80}
         align="flex-start"
         position="apart"
         style={{ width: '100%' }}
@@ -85,6 +92,12 @@ export const Footer: FC<IProps> = (props) => {
           </Title>
           <List className={classes.listStyle}>
             <List.Item>
+              <Link href="">Nexalt Pro</Link>
+            </List.Item>
+            <List.Item>
+              <Link href="">Contactez-nous</Link>
+            </List.Item>
+            <List.Item>
               <Link href="/legalNotices">Mentions légales</Link>
             </List.Item>
             <List.Item>
@@ -98,10 +111,10 @@ export const Footer: FC<IProps> = (props) => {
           </Title>
           <List className={classes.listStyle}>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">Créer son profil</Link>
             </List.Item>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">Accéder à son profil</Link>
             </List.Item>
           </List>
         </Stack>
@@ -111,10 +124,13 @@ export const Footer: FC<IProps> = (props) => {
           </Title>
           <List className={classes.listStyle}>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">Créer son profil</Link>
             </List.Item>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">Accéder au tableau de bord</Link>
+            </List.Item>
+            <List.Item>
+              <Link href="">Offres et tarifs</Link>
             </List.Item>
           </List>
         </Stack>
@@ -124,10 +140,16 @@ export const Footer: FC<IProps> = (props) => {
           </Title>
           <List className={classes.listStyle}>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">CV</Link>
             </List.Item>
             <List.Item>
-              <Link href="">Lorem ipsum dolor</Link>
+              <Link href="">Étudiants</Link>
+            </List.Item>
+            <List.Item>
+              <Link href="">Entreprises</Link>
+            </List.Item>
+            <List.Item>
+              <Link href="">Guides</Link>
             </List.Item>
           </List>
         </Stack>

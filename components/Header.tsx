@@ -44,13 +44,27 @@ const useStyles = createStyles((theme) => ({
   },
   signInBtn: {
     backgroundColor: colors.secondaryBlue,
+    textTransform: 'uppercase',
+    fontWeight: 800,
     fontSize: 16,
     height: 46,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: colors.primaryBlue,
+      transition: 'background-color .2s',
+    },
   },
   signUpBtn: {
     backgroundColor: colors.primaryBlue,
+    textTransform: 'uppercase',
+    fontWeight: 800,
     fontSize: 16,
     height: 46,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: '#725FFE',
+      transition: 'background-color .2s',
+    },
   },
   containerButtons: {
     marginRight: 75,

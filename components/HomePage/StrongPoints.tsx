@@ -8,8 +8,9 @@ interface IProps {}
 
 const useStyles = createStyles((theme) => ({
   title: {
+    fontFamily: 'Poppins, sans-serif',
     fontSize: 40,
-    fontWeight: 'bold',
+    fontWeight: 800,
     color: '#fff',
   },
   containerCard: {
@@ -51,7 +52,7 @@ export const StrongPoints: FC<IProps> = (props) => {
           iconColor="#FFFFFF"
         />
         <StrongPointsCard
-          contentCard="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"
+          contentCard="Nous mettons tout en œuvre pour que vous, étudiants, trouviez votre entreprise de façon rapide et profitable pour vous."
           backgroundColor={colors.secondaryBlue}
           textColor="#FFFFFF"
           iconColor="#FFFFFF"

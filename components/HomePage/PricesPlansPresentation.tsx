@@ -17,6 +17,12 @@ const useStyles = createStyles((theme) => ({
   },
   leftSide: {
     width: '40%',
+      '@media (max-width: 1600px)': {
+          width: '30%',
+      },
+      '@media (max-width: 1400px)': {
+          width: '100%',
+      },
   },
   btn: {
     backgroundColor: '#fff',
@@ -25,9 +31,26 @@ const useStyles = createStyles((theme) => ({
     height: 65,
     fontSize: 25,
     marginTop: 45,
+    marginBottom: 0,
+    fontWeight: 800,
+    transition: 'background-color .2s, color .2s',
+    ':hover': {
+      backgroundColor: colors.primaryBlue,
+      color: colors.secondaryBackgroundColor,
+      transition: 'background-color .2s, color .2s',
+      },
+      '@media (max-width: 1450px)': {
+          marginBottom: 40,
+      }
   },
   text: {
     width: '80%',
+      '@media (max-width: 1500px)': {
+          width: '80%',
+      },
+      '@media (max-width: 1450px)': {
+          width: '80%',
+      }
   },
 }));
 
@@ -58,25 +81,23 @@ export const PricesPlansPresentation: FC<IProps> = (props) => {
           price="0"
           labelBtn="Je m'inscris"
           listData={[
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
+            'Accès à son profil',
+            'Mettre à jour ses informations',
+            'Profil vérifé par nos experts',
+            'Gratuité',
           ]}
         />
         <CardPrice
           linkUrl="/prices"
           cardTitle="Formule Entreprise"
-          price="200-1000"
+          price="200-800"
           labelBtn="Voir les tarifs"
           listData={[
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
-            'Lorem ipsum dolor sit',
+            'Accès aux profils (complets)',
+            '2 à 6 nouveaux profils par jour',
+            'Accompagnement personnalisé',
+            'Contrats en ligne',
+            'Paiement à 45 jours',
           ]}
         />
       </Group>

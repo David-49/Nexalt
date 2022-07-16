@@ -33,8 +33,8 @@ const useStyles = createStyles((theme) => ({
   containerWhiteBlockTop: {
     backgroundColor: colors.primaryBackgroundColor,
     borderBottomRightRadius: 50,
-    paddingBottom: 293,
-    paddingTop: 138,
+    paddingBottom: 240,
+    paddingTop: 140,
     width: '93%',
     marginRight: 'auto',
     paddingLeft: '150px',
@@ -47,6 +47,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: 'Montserrat',
     zIndex: 4,
     position: 'relative',
+    textTransform: 'uppercase',
   },
   textIntro: {
     marginTop: 25,
@@ -64,6 +65,9 @@ const useStyles = createStyles((theme) => ({
     right: 180,
     bottom: -10,
     zIndex: 0,
+    '@media (max-width: 1450px)': {
+      right: 100,
+    }
   },
   firstBackgroundDecorationContainer: {
     position: 'absolute',
@@ -189,12 +193,8 @@ const Home: NextPage<IProps> = () => {
                 </Text>
               </Title>
               <Text size="xl" className={classes.textIntro}>
-                Nexalt aide les étudiants à trouver une alternance plus
-                facilement. Nexalt aide les étudiants à trouver une alternance
-                plus facilement. Nexalt aide les étudiants à trouver une
-                alternance plus facilement. Nexalt aide les étudiants à trouver
-                une alternance plus facilement. Nexalt aide les étudiants à
-                trouver une alternance plus facilement.
+                Avec Nexalt, tout devient plus simple !
+                Dénicher facilement votre entreprise ou votre alternant grâce à nos services.
               </Text>
               <div className={classes.containerFilter}>
                 <HomePageFilter />
