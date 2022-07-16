@@ -7,8 +7,14 @@ const useStyles = createStyles((theme) => ({
   btn: {
     backgroundColor: colors.secondaryBlue,
     textTransform: 'uppercase',
+    fontWeight: 800,
     fontSize: 16,
     height: 46,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: colors.primaryBlue,
+      transition: 'background-color .2s',
+    },
   },
 }));
 

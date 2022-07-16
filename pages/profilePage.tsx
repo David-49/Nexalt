@@ -284,6 +284,7 @@ const useStyles = createStyles( ({
     identityRecommandation: {
         display: 'flex',
         flexDirection: 'row',
+        marginTop: 10,
     },
     svgRecommandation: {
         width: 20,
@@ -340,11 +341,11 @@ const useStyles = createStyles( ({
         borderRadius: 15,
         textAlign: 'center',
         marginTop: 15,
-        transition: 'background-color .3s',
+        transition: 'background-color .2s',
         ':hover': {
-            backgroundColor: colors.secondaryBlue,
-            transition: 'background-color .3s',
-        }
+            backgroundColor: '#725FFE',
+            transition: 'background-color .2s',
+        },
     },
     allContent: {
         display: 'grid',
@@ -435,10 +436,10 @@ const useStyles = createStyles( ({
         textAlign: 'center',
         borderRadius: 10,
         textTransform: 'uppercase',
-        transition: 'background-color .3s',
+        transition: 'background-color .2s',
         ':hover': {
-            backgroundColor: colors.secondaryBlue,
-            transition: 'background-color .3s',
+            backgroundColor: '#725FFE',
+            transition: 'background-color .2s',
         },
     },
     skillGraph: {
@@ -569,6 +570,7 @@ const useStyles = createStyles( ({
         height: 32,
         borderRadius: 5,
         overflow: 'hidden',
+        marginTop: 10,
     },
     nameFlag: {
         display: 'flex',
@@ -819,7 +821,7 @@ const ProfilePage: HomePageWithLayout = () => {
                                          M15,14.3c-2.1,0-3.7-1.8-3.7-3.8c0-2.1,1.8-3.7,3.8-3.7c2,0,3.7,1.7,3.7,3.7C18.8,12.6,17.1,14.3,15,14.3
                                         C15.1,14.3,15,14.3,15,14.3z"/>
                                     </svg>
-                                    <span className={classes.localisationText}>Cherche à Angers, Tours, Paris, Evreux</span>
+                                    <span className={classes.localisationText}>Cherche à Angers, Tours, Paris</span>
                                 </div>
                                 <div className={classes.identityRecommandation}>
                                     <svg className={classes.svgRecommandation} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"

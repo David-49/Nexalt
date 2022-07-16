@@ -18,12 +18,15 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: '#fff',
     paddingTop: 30,
     paddingBottom: 30,
-    paddingLeft: 55,
-    paddingRight: 55,
+    paddingLeft: 15,
+    paddingRight: 15,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     width: 335,
     boxShadow: '0px 0px 30px #00000029',
+    '@media (max-width: 1400px)': {
+      display: "none",
+    }
   },
   title: {
     fontSize: 24,
@@ -36,9 +39,16 @@ const useStyles = createStyles((theme) => ({
   btn: {
     textTransform: 'uppercase',
     backgroundColor: colors.primaryBlue,
+    color: colors.secondaryBackgroundColor,
     height: 64,
     fontSize: 24,
     marginTop: 30,
+    fontWeight: 800,
+    transition: 'background-color .2s',
+    ':hover': {
+      backgroundColor: '#725FFE',
+      transition: 'background-color .2s',
+    },
   },
 }));
 
