@@ -1,29 +1,18 @@
 import { FC, useState } from 'react';
 
-import {
-  Container,
-  createStyles,
-  Group,
-  Title,
-  Text,
-  Button,
-} from '@mantine/core';
+import { Container, createStyles, Group, Text, Button } from '@mantine/core';
 import { colors } from '../../theme';
 
 interface IProps {
   onSetActiveSteps: (data: number) => void;
   onSetStatusUser: (value: string) => void;
+  statusUserSelected: string;
 }
 
 const useStyles = createStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: 800,
   },
   btnSelectionStatus: {
     backgroundColor: colors.primaryBackgroundColor,
@@ -63,26 +52,18 @@ const useStyles = createStyles((theme) => ({
 
 const StatusSelector: FC<IProps> = (props) => {
   const { classes } = useStyles();
-  const { onSetActiveSteps, onSetStatusUser } = props;
-  const [statusSelected, setStatusSelected] = useState<string | null>(null);
+  const { onSetActiveSteps, onSetStatusUser, statusUserSelected } = props;
+
+  const [statusSelected, setStatusSelected] =
+    useState<string>(statusUserSelected);
 
   const handleOnValidation = () => {
-    onSetStatusUser(statusSelected!);
+    onSetStatusUser(statusSelected);
     onSetActiveSteps(0);
   };
 
   return (
-    <Container
-      pt={114}
-      pl={100}
-      pr={100}
-      pb={150}
-      className={classes.container}
-      fluid
-    >
-      <Title pb={60} className={classes.title} order={1}>
-        Inscription
-      </Title>
+    <Container className={classes.container} fluid>
       <Group spacing={50} position="apart">
         <Button
           radius={15}
