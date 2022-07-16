@@ -159,7 +159,7 @@ const Home: NextPage<IProps> = () => {
   return (
     <Container fluid className={classes.containerPage}>
       <Head>
-        <title>Nexalt</title>
+        <title>Bienvenue sur notre site - Nexalt</title>
         <meta name="description" content="Nexalt..." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

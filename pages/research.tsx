@@ -310,7 +310,7 @@ const Research: HomePageWithLayout = () => {
     return (
         <Container fluid className={classes.containerPage}>
             <Head>
-                <title>Bienvenue sur la page de recherche</title>
+                <title>Recherchez votre perle rare</title>
                 <meta name="description" content="Faites vos recherches" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
