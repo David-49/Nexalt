@@ -2,13 +2,10 @@ import { Container, createStyles, Text, Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { colors } from '../theme';
-import { HomePageFilter } from '../components/HomePageFilter';
-import { StrongPoints } from '../components/HomePage/StrongPoints';
-import { PartnerCompanies } from '../components/HomePage/PartnerCompanies';
-import { PlatformOperation } from '../components/HomePage/PlatformOperation';
-import { PricesPlansPresentation } from '../components/HomePage/PricesPlansPresentation';
-import { ShortPresentation } from '../components/HomePage/ShortPresentationApp';
-import { SocialMedia } from '../components/HomePage/SocialMedia';
+import { PriceForStudent } from '../components/PricesPage/PriceForStudent';
+import { PricesPlans } from '../components/PricesPage/PricesPlans';
+import { PricesComments } from '../components/PricesPage/PricesComments';
+import { PricesPlansPresentationOnly } from '../components/PricesPage/PricesPlansPresentationOnly';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 
@@ -37,28 +34,29 @@ const useStyles = createStyles((theme) => ({
         paddingLeft: '150px',
         paddingRight: '150px',
     },
-
     title: {
         fontSize: 50,
         lineHeight: 1,
         fontFamily: 'Montserrat',
         zIndex: 4,
         position: 'relative',
+        textTransform: 'uppercase',
     },
     textIntro: {
         marginTop: 25,
-        width: '65%',
+        width: '50%',
         zIndex: 4,
         position: 'relative',
-    },
-    containerFilter: {
-        marginTop: 55,
-        zIndex: 4,
-        position: 'relative',
+        '@media (max-width: 1720px)': {
+            width: '40%',
+        },
+        '@media (max-width: 1400px)': {
+            width: '30%',
+        },
     },
     pricesPlansContainer: {
         position: 'absolute',
-        right: -140,
+        right: 180,
         bottom: 0,
         zIndex: 0,
     },
@@ -77,7 +75,7 @@ const useStyles = createStyles((theme) => ({
         backgroundColor: colors.primaryBlue,
         zIndex: -2,
     },
-    containerStrongPoints: {
+    containerStudentsPrices: {
         backgroundColor: colors.primaryBlue,
         borderTopLeftRadius: 50,
         borderBottomLeftRadius: 50,
@@ -86,9 +84,17 @@ const useStyles = createStyles((theme) => ({
         padding: 50,
         paddingLeft: 60,
     },
-    containerPartnerCompanies: {
+    containerPricesPlans: {
         margin: 'auto',
-        marginTop: 220,
+        marginTop: 140,
+        width: '100%',
+        paddingLeft: '150px',
+        paddingRight: '150px',
+    },
+    containerPricesComments: {
+        margin: 'auto',
+        marginTop: 140,
+        marginBottom: 140,
         width: '100%',
         paddingLeft: '150px',
         paddingRight: '150px',
@@ -109,34 +115,6 @@ const useStyles = createStyles((theme) => ({
         backgroundColor: colors.secondaryBlue,
         borderTopRightRadius: 50,
         borderBottomRightRadius: 50,
-    },
-    containerShortPresentation: {
-        margin: 'auto',
-        width: '80%',
-    },
-    containerSocialMedia: {
-        marginTop: 180,
-        paddingBottom: 100,
-    },
-    containerShapeBottom: {
-        position: 'relative',
-        paddingLeft: 150,
-        paddingRight: 150,
-    },
-    blueShape: {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        bottom: 0,
-        width: 250,
-        zIndex: -2,
-        backgroundColor: colors.secondaryBlue,
-    },
-    containerWhiteBlock: {
-        paddingTop: 130,
-        borderTopLeftRadius: 50,
-        borderBottomLeftRadius: 50,
-        backgroundColor: colors.primaryBackgroundColor,
     },
     containerFooter: {
         backgroundColor: colors.secondaryBlue,
@@ -166,7 +144,7 @@ const Prices: NextPage<IProps> = () => {
                         <div className={classes.blueShapeTop} />
                         <div className={classes.containerWhiteBlockTop}>
                             <div className={classes.pricesPlansContainer}>
-                                <PricesPlansPresentation />
+                                <PricesPlansPresentationOnly />
                             </div>
                             <Title order={1}>
                                 <Text
@@ -174,49 +152,34 @@ const Prices: NextPage<IProps> = () => {
                                     weight={800}
                                     color={colors.primaryBlue}
                                 >
-                                    Trouver votre
+                                    Offre
                                 </Text>
                                 <Text
                                     className={classes.title}
                                     weight={800}
                                     color={colors.secondaryBlue}
                                 >
-                                    perle rare
+                                    et tarifs
                                 </Text>
                             </Title>
                             <Text size="xl" className={classes.textIntro}>
-                                Avec Nexalt, tout devient plus simple !
-                                Dénicher facilement votre entreprise ou votre alternant grâce à nos services.
+                                Retrouvez toutes nos offres et nos tarifs.
+                                Nos offres sont faites pour les étudiants et pour les entreprises.
+                                Il ne vous reste plus qu’à faire votre choix !
                             </Text>
-                            <div className={classes.containerFilter}>
-                                <HomePageFilter />
-                            </div>
                         </div>
                     </div>
-                    <div className={classes.containerStrongPoints}>
-                        <StrongPoints />
+                    <div className={classes.containerStudentsPrices}>
+                        <PriceForStudent />
                     </div>
-                    <div className={classes.containerPartnerCompanies}>
-                        <PartnerCompanies />
+                    <div className={classes.containerPricesPlans}>
+                        <PricesPlans />
                     </div>
-                    <div className={classes.containerPlatformOperation}>
-                        <PlatformOperation />
-                    </div>
-                </div>
-
-                <div className={classes.containerShapeBottom}>
-                    <div className={classes.blueShape} />
-                    <div className={classes.containerWhiteBlock}>
-                        <div className={classes.containerShortPresentation}>
-                            <ShortPresentation />
-                        </div>
-                        <div className={classes.containerSocialMedia}>
-                            <SocialMedia />
-                        </div>
+                    <div className={classes.containerPricesComments}>
+                        <PricesComments />
                     </div>
                 </div>
             </main>
-
             <div className={classes.containerFooter}>
                 <Footer />
             </div>

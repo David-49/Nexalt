@@ -46,6 +46,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: 'Montserrat',
     zIndex: 4,
     position: 'relative',
+    textTransform: 'uppercase',
   },
   textIntro: {
     marginTop: 25,
