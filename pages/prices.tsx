@@ -11,7 +11,7 @@ import { Header } from '../components/Header';
 
 interface IProps {}
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
     containerPage: {
         padding: 0,
         width: '100%',
@@ -49,6 +49,9 @@ const useStyles = createStyles((theme) => ({
         position: 'relative',
         '@media (max-width: 1720px)': {
             width: '40%',
+        },
+        '@media (max-width: 1549px)': {
+            width: '33%',
         },
         '@media (max-width: 1400px)': {
             width: '30%',

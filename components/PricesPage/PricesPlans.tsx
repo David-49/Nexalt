@@ -6,7 +6,7 @@ import {colors} from "../../theme";
 
 interface IProps {}
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   title: {
     fontFamily: 'Poppins, sans-serif',
     fontWeight: 700,
@@ -118,7 +118,7 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: '#725FFE',
       transition: 'background-color .2s',
     },
-    '@media (max-width: 1350px)': {
+    '@media (max-width: 1450px)': {
       paddingTop: 25,
       paddingRight: 40,
       paddingBottom: 25,
@@ -143,7 +143,7 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: '#725FFE',
       transition: 'background-color .2s, color .2s',
     },
-    '@media (max-width: 1350px)': {
+    '@media (max-width: 1450px)': {
       paddingTop: 25,
       paddingRight: 40,
       paddingBottom: 25,
@@ -152,7 +152,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const PricesPlans: FC<IProps> = (props) => {
+export const PricesPlans: FC<IProps> = () => {
   const { classes } = useStyles();
   return (
       <div className={classes.container}>

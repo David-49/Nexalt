@@ -6,7 +6,7 @@ import {colors} from "../../theme";
 
 interface IProps {}
 
-const useStyles = createStyles((theme) => ({
+const useStyles = createStyles(() => ({
   title: {
     fontFamily: 'Poppins, sans-serif',
     fontWeight: 700,
@@ -28,10 +28,12 @@ const useStyles = createStyles((theme) => ({
     width: '70%',
   },
   comments: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridGap: 30,
+    gridAutoRows: 'minmax(100px, auto)',
     '@media (max-width: 1350px)': {
-      flexDirection: 'column',
+      gridTemplateColumns: 'repeat(1, 1fr)',
     }
 
   },
@@ -49,11 +51,6 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: 35,
     width: 608,
     marginTop: 0,
-    marginLeft: 40,
-    '@media (max-width: 1350px)': {
-      marginLeft: 0,
-      marginTop: 40,
-    }
   },
   starsRank: {
     display: 'flex',
@@ -115,7 +112,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export const PricesComments: FC<IProps> = (props) => {
+export const PricesComments: FC<IProps> = () => {
   const { classes } = useStyles();
   return (
       <div className={classes.container}>
