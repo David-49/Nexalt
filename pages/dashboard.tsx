@@ -1,6 +1,7 @@
 import { ReactElement, ReactNode } from 'react';
 
 import {Container, createStyles} from "@mantine/core";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from 'next';
@@ -69,6 +70,9 @@ const useStyles = createStyles( ({
         paddingLeft: 20,
         width: '100%',
         listStyle: "none",
+        '@media (max-width: 1820px)': {
+            width: '72%',
+        },
         '@media (max-width: 1700px)': {
             width: '72%',
         },
@@ -106,6 +110,12 @@ const useStyles = createStyles( ({
         paddingBottom: 15,
         paddingLeft: 20,
         listStyle: "none",
+        '@media (max-width: 1820px)': {
+            width: '72%',
+        },
+        '@media (max-width: 1700px)': {
+            width: '72%',
+        },
     },
     linkActiveBoardMenu: {
         display: 'flex',
@@ -437,7 +447,7 @@ const useStyles = createStyles( ({
         top: -10,
     },
     p18: {
-        top: -10,
+        top: -25,
     },
     p19: {
         top: -30,
@@ -451,10 +461,13 @@ const useStyles = createStyles( ({
 const Dashboard: HomePageWithLayout = () => {
     const {classes} = useStyles();
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <Container fluid className={classes.containerPage}>
+        <Head>
+            <title>Bienvenue sur votre tableau de bord</title>
+            <meta name="description" content="Vous pourrez retrouver toute les informations nécessaire sur votre tableau de bord" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <section className={classes.board}>
             <div className={classes.boardInner}>
                 <h1 className={classes.title}>Tableau de bord</h1>
@@ -924,7 +937,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p13}>
+                                        <div className={`${classes.profileImg} ${classes.p13}`}>
                                             <Image
                                                 src="/assets/images/photo_13.jpg"
                                                 width={400}
@@ -940,7 +953,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p14}>
+                                        <div className={`${classes.profileImg} ${classes.p14}`}>
                                             <Image
                                                 src="/assets/images/photo_14.jpg"
                                                 width={400}
@@ -956,7 +969,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p15}>
+                                        <div className={`${classes.profileImg} && ${classes.p15}`}>
                                             <Image
                                                 src="/assets/images/photo_15.jpg"
                                                 width={400}
@@ -972,7 +985,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p16}>
+                                        <div className={`${classes.profileImg} && ${classes.p16}`}>
                                             <Image
                                                 src="/assets/images/photo_16.jpg"
                                                 width={400}
@@ -988,7 +1001,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p17}>
+                                        <div className={`${classes.profileImg} && ${classes.p17}`}>
                                             <Image
                                                 src="/assets/images/photo_17.jpg"
                                                 width={400}
@@ -1004,7 +1017,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p18}>
+                                        <div className={`${classes.profileImg} && ${classes.p18}`}>
                                             <Image
                                                 src="/assets/images/photo_18.jpg"
                                                 width={400}
@@ -1020,7 +1033,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p19}>
+                                        <div className={`${classes.profileImg} && ${classes.p19}`}>
                                             <Image
                                                 src="/assets/images/photo_19.jpg"
                                                 width={400}
@@ -1036,7 +1049,7 @@ const Dashboard: HomePageWithLayout = () => {
                             <Link href="">
                                 <a className={classes.linkProfilesViewed}>
                                     <div className={classes.imgMask}>
-                                        <div className={classes.profileImg && classes.p20}>
+                                        <div className={`${classes.profileImg} && ${classes.p20}`}>
                                             <Image
                                                 src="/assets/images/photo_20.jpg"
                                                 width={400}

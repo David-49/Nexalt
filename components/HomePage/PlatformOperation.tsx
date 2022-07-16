@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   },
   btn: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: 800,
     height: 55,
     marginTop: 60,
     paddingTop: 16,
@@ -26,6 +26,12 @@ const useStyles = createStyles((theme) => ({
     color: colors.primaryBlue,
     backgroundColor: '#fff',
     boxShadow: '0px 5px 15px #0000001A',
+    transition: 'background-color .2s, color .2s',
+    ':hover': {
+      backgroundColor: colors.primaryBlue,
+      color: colors.secondaryBackgroundColor,
+      transition: 'background-color .2s, color .2s',
+    },
   },
   containerCard: {
     alignItems: 'stretch',
@@ -54,14 +60,14 @@ export const PlatformOperation: FC<IProps> = (props) => {
           boxShadow="0px 5px 14px #0000001A"
         />
         <StrongPointsCard
-          contentCard="Vous êtes étudiant :"
+          contentCard="Vous êtes étudiant : indiquez votre situation, donnez des informations sur vous, indiquez des informations sur votre projet professionnel"
           backgroundColor="#fff"
           textColor="#0F0C29"
           iconColor="#5f50cf"
           boxShadow="0px 5px 14px #0000001A"
         />
         <StrongPointsCard
-          contentCard="Vous êtes une entreprise :"
+          contentCard="Vous êtes une entreprise : présentez votre entreprise, indiquez les postes que vous recherchez."
           backgroundColor="#fff"
           textColor="#0F0C29"
           iconColor="#5f50cf"

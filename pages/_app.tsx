@@ -9,7 +9,7 @@ import { MantineProvider } from '@mantine/core';
 import { NextPage } from 'next';
 import { AuthContextProvider } from '../context/AuthContext';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
-import { mantineTheme } from '../theme/index';
+import { mantineTheme } from '../theme';
 import { GlobalStyles } from '../theme/global';
 
 type NextPageWithLayout<P = {}> = NextPage<P> & {
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     '/about',
     '/prices',
     '/blog',
-    '/dashboard',
+    '/research',
   ];
   const router = useRouter();
 

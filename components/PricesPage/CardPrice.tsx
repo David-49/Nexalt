@@ -24,7 +24,7 @@ const useStyles = createStyles((theme) => ({
     borderTopRightRadius: 30,
     width: 335,
     boxShadow: '0px 0px 30px #00000029',
-    '@media (max-width: 1400px)': {
+    '@media (max-width: 1300px)': {
       display: "none",
     }
   },
