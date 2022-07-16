@@ -864,8 +864,9 @@ const ProfilePage: HomePageWithLayout = () => {
                         <div className={classes.firstPartContent}>
                             <div className={classes.profileContent} id="about">
                                 <h2 className={classes.h2}>À propos de moi</h2>
-                                <p className={classes.profilePresentation}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan magna sit amet nibh mollis fringilla. Donec luctus, felis quis sollicitudin congue, libero lorem commodo metus, maximus ullamcorper felis turpis et neque. Sed pulvinar at arcu et ultricies. Quisque rhoncus tellus eget ante placerat, sed accumsan tortor dictum.
-                                    Integer at lorem sem. Phasellus at sapien id tellus venenatis ultrices sit amet euismod ipsum. Aliquam erat volutpat.</p>
+                                <p className={classes.profilePresentation}>Hello !<br/><br/>
+                                    Actuellement en deuxième année d’un Bachelor Concepteur Réalisateur Web et Digital, je me spécialise en WebDesign à la rentrée prochaine. Je souhaite faire évoluer mes compétences au sein d’une entreprise dynamique.
+                                    See you soon …</p>
                             </div>
 
                             <div className={classes.profileContent} id="portfolio">
@@ -1020,7 +1021,7 @@ const ProfilePage: HomePageWithLayout = () => {
                                 <h2 className={classes.h2}>Expériences</h2>
                                 <div className={classes.experiencesContent}>
                                     <div className={classes.experiencesFirstPart}>
-                                        <span className={classes.officeName}>Moreau-Millet</span>
+                                        <span className={classes.officeName}>Mipix</span>
                                         <div>
                                             <span className={classes.officeLocalisation}>Angers</span>
                                             <svg className={classes.svgOfficeLocalisation} version="1.1" id="Calque_1"
@@ -1052,7 +1053,7 @@ const ProfilePage: HomePageWithLayout = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className={classes.experienceDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan magna sit amet nibh mollis fringilla. Donec luctus, felis quis sollicitudin congue, libero lorem commodo metus, maximus ullamcorper felis turpis et neque. Sed pulvinar at arcu et ultricies. Quisque rhoncus tellus eget ante placerat, sed accumsan tortor dictum.
+                                    <p className={classes.experienceDescription}>Création de logo, de bannières, d’affiches, de retouche photo et de motion design en faisant des animations de logo.
                                     </p>
                                 </div>
                                 <div className={classes.experiencesContent}>
@@ -1089,7 +1090,8 @@ const ProfilePage: HomePageWithLayout = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className={classes.experienceDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan magna sit amet nibh mollis fringilla. Donec luctus, felis quis sollicitudin congue, libero lorem commodo metus, maximus ullamcorper felis turpis et neque. Sed pulvinar at arcu et ultricies. Quisque rhoncus tellus eget ante placerat, sed accumsan tortor dictum.
+                                    <p className={classes.experienceDescription}>Refonte de plusieurs parties du site internet.<br/>
+                                        Maquette sur XD puis intégration de la solution, modification d’un thème wordpress préinstallé.
                                     </p>
                                 </div>
                             </div>

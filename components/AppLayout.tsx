@@ -97,7 +97,14 @@ const useStyles = createStyles(({
         width: 25,
         fill: colors.primaryBlue,
         transition: 'fill 0.3s',
-    }
+    },
+    profilePicture : {
+        width: 70,
+        height: 70,
+        borderRadius: 15,
+        overflow: 'hidden',
+        backgroundColor: colors.tertiaryBlue,
+    },
 }));
 
 export const AppLayout: FC<IProps> = (props) => {
@@ -292,11 +299,13 @@ export const AppLayout: FC<IProps> = (props) => {
                             </li>
                         </ul>
                     </nav>
-                    <Image
-                        src="/assets/images/profile-picture.png" alt=""
-                        width={70}
-                        height={70}
-                    />
+                    <div className={classes.profilePicture}>
+                        <Image
+                            src="/assets/images/photo_bastien.png" alt=""
+                            width={3593}
+                            height={3696}
+                        />
+                    </div>
                 </div>
             </header>
             <main className={classes.main}>
