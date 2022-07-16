@@ -62,6 +62,12 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
     textTransform: 'uppercase',
     borderRadius: 15,
+    transition: 'background-color .2s, color .2s',
+    ':hover': {
+      color: colors.secondaryBackgroundColor,
+      backgroundColor: '#725FFE',
+      transition: 'background-color .2s, color .2s',
+    }
   },
 }));
 
