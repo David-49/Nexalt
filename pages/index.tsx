@@ -2,7 +2,6 @@ import { Container, createStyles, Text, Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { colors } from '../theme';
 import { HomePageFilter } from '../components/HomePageFilter';
 import womanImage from '../public/assets/images/photo_accueil@2x.png';
@@ -67,7 +66,7 @@ const useStyles = createStyles((theme) => ({
     zIndex: 0,
     '@media (max-width: 1450px)': {
       right: 100,
-    }
+    },
   },
   firstBackgroundDecorationContainer: {
     position: 'absolute',
@@ -176,7 +175,6 @@ const Home: NextPage<IProps> = () => {
                 <Image src={womanImage} width={550} height={750} priority />
               </div>
               <Title order={1}>
-                <div id="top" />
                 <Text
                   className={classes.title}
                   weight={800}
@@ -193,8 +191,8 @@ const Home: NextPage<IProps> = () => {
                 </Text>
               </Title>
               <Text size="xl" className={classes.textIntro}>
-                Avec Nexalt, tout devient plus simple !
-                Dénicher facilement votre entreprise ou votre alternant grâce à nos services.
+                Avec Nexalt, tout devient plus simple ! Dénicher facilement
+                votre entreprise ou votre alternant grâce à nos services.
               </Text>
               <div className={classes.containerFilter}>
                 <HomePageFilter />
@@ -225,9 +223,6 @@ const Home: NextPage<IProps> = () => {
             <div className={classes.containerSocialMedia}>
               <SocialMedia />
             </div>
-            <Link href="#top">
-              <a>To the top</a>
-            </Link>
           </div>
         </div>
       </main>
