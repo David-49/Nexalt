@@ -1,6 +1,6 @@
 import { Container, createStyles, Text, Title } from '@mantine/core';
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import { colors } from '../theme';
 import { PriceForStudent } from '../components/PricesPage/PriceForStudent';
 import { PricesPlans } from '../components/PricesPage/PricesPlans';
