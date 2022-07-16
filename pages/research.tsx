@@ -6,6 +6,7 @@ import Link from "next/link";
 import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
 import { colors } from '../theme';
+import Head from "next/head";
 
 type HomePageWithLayout = NextPage & {
     getLayout: (page: ReactElement) => ReactNode;
@@ -308,6 +309,11 @@ const Research: HomePageWithLayout = () => {
 
     return (
         <Container fluid className={classes.containerPage}>
+            <Head>
+                <title>Bienvenue sur la page de recherche</title>
+                <meta name="description" content="Faites vos recherches" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <section className={classes.filter}>
                 <div className={classes.filterInner}>
                     <h1 className={classes.title}>Filtres de recherche</h1>

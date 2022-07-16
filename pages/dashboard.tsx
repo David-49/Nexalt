@@ -6,6 +6,7 @@ import Link from "next/link";
 import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
 import { colors } from '../theme';
+import Head from "next/head";
 
 type HomePageWithLayout = NextPage & {
     getLayout: (page: ReactElement) => ReactNode;
@@ -462,6 +463,11 @@ const Dashboard: HomePageWithLayout = () => {
 
     return (
         <Container fluid className={classes.containerPage}>
+        <Head>
+            <title>Bienvenue sur votre tableau de bord</title>
+            <meta name="description" content="Vous pourrez retrouver toute les informations nécessaire sur votre tableau de bord" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <section className={classes.board}>
             <div className={classes.boardInner}>
                 <h1 className={classes.title}>Tableau de bord</h1>
