@@ -31,9 +31,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     '/about',
     '/prices',
     '/blog',
-    '/dashboard',
     '/research',
-    '/profilePage',
   ];
   const router = useRouter();
 

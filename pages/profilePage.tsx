@@ -7,7 +7,6 @@ import { NextPage } from 'next';
 import {AppLayout} from "../components/AppLayout";
 import { colors } from '../theme';
 
-
 type HomePageWithLayout = NextPage & {
     getLayout: (page: ReactElement) => ReactNode;
 };
