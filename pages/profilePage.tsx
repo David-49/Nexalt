@@ -730,15 +730,18 @@ const ProfilePage: HomePageWithLayout = () => {
             </Head>
             <section className={classes.board}>
                 <div className={classes.boardInner}>
-                    <a href="page_recherche.html" className={classes.title}>
+                    <Link href="/research">
+                        <a  className={classes.title}>
                         <svg className={classes.svgBack} version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
                              xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 20 19.9"
                              xmlSpace="preserve">
-                        <path d="M15.2,18.1c0.4,0.4,0.4,1.1,0,1.5c-0.2,0.2-0.5,0.3-0.7,0.3c-0.3,0-0.5-0.1-0.7-0.3l-8.9-8.9c-0.4-0.4-0.4-1.1,0-1.5
+                            <path d="M15.2,18.1c0.4,0.4,0.4,1.1,0,1.5c-0.2,0.2-0.5,0.3-0.7,0.3c-0.3,0-0.5-0.1-0.7-0.3l-8.9-8.9c-0.4-0.4-0.4-1.1,0-1.5
                             l8.9-8.9c0.4-0.4,1.1-0.4,1.5,0c0.4,0.4,0.4,1.1,0,1.5L7,9.9L15.2,18.1z"/>
                         </svg>
-                        Retour à la recherche</a>
+                        Retour à la recherche
+                        </a>
+                    </Link>
                     <ul className={classes.boardMenu}>
                         <li className={classes.liActiveBoardMenu}>
                             <Link href="#about">
