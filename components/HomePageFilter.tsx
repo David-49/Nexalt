@@ -15,8 +15,10 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: 22,
     paddingLeft: 35,
     paddingRight: 35,
+    transition: 'ease 0.3s',
     '&: hover': {
       backgroundColor: colors.secondaryBlue,
+      transition: 'ease 0.3s',
     },
   },
   inputSearchWith: {

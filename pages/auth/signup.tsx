@@ -16,8 +16,8 @@ import { IconAlertCircle } from '@tabler/icons';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { z } from 'zod';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { PasswordStrength } from '../../components/Authentification/PasswordStrength';
 import { useAuth } from '../../context/AuthContext';
@@ -106,8 +106,10 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 400,
     fontSize: 16,
     backgroundColor: colors.primaryBlue,
+    transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: colors.secondaryBlue,
+      transition: 'ease 0.3s',
     },
   },
   inscriptionBtn: {
@@ -115,8 +117,10 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: colors.primaryBlue,
     width: '100%',
     fontWeight: 400,
+    transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: colors.secondaryBlue,
+      transition: 'ease 0.3s',
     },
   },
   form: {
@@ -170,7 +174,7 @@ const SignUp: NextPage<IProps> = (props) => {
     try {
       await signup(data.email, data.password);
       setIsInscriptionFailed(false);
-      router.push('/');
+      router.push('/account_configuration');
     } catch (err: any) {
       setIsInscriptionFailed(true);
     }

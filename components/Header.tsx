@@ -90,6 +90,7 @@ export const Header: FC<IProps> = (props) => {
             <Button
               size="md"
               radius="md"
+              uppercase
               className={
                 item.id === 'signin' ? classes.signInBtn : classes.signUpBtn
               }

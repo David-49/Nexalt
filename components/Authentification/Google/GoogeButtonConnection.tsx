@@ -15,9 +15,11 @@ const useStyles = createStyles((theme) => ({
     color: '#a7a4b4',
     marginBottom: 50,
     fontWeight: 'normal',
+    transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: colors.secondaryBlue,
       color: '#fff',
+      transition: 'ease 0.3s',
     },
   },
 }));
@@ -30,7 +32,7 @@ export const GoogleButtonConnection: FC<IProps> = (props) => {
 
   const handleSignupWithGoogle = async () => {
     await signInWithGoogle();
-    router.push('/');
+    router.push('/account_configuration');
   };
 
   return (

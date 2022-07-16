@@ -66,7 +66,7 @@ const useStyles = createStyles((theme) => ({
     zIndex: 0,
     '@media (max-width: 1450px)': {
       right: 100,
-    }
+    },
   },
   firstBackgroundDecorationContainer: {
     position: 'absolute',
@@ -191,8 +191,8 @@ const Home: NextPage<IProps> = () => {
                 </Text>
               </Title>
               <Text size="xl" className={classes.textIntro}>
-                Avec Nexalt, tout devient plus simple !
-                Dénicher facilement votre entreprise ou votre alternant grâce à nos services.
+                Avec Nexalt, tout devient plus simple ! Dénicher facilement
+                votre entreprise ou votre alternant grâce à nos services.
               </Text>
               <div className={classes.containerFilter}>
                 <HomePageFilter />
