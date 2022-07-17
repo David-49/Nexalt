@@ -9,6 +9,7 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth';
 import { auth } from '../config/firebase';
+import { User as UserType } from '../types/User';
 
 const AuthContext = createContext<any>({});
 
@@ -19,7 +20,7 @@ export const AuthContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<UserType | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,8 +28,8 @@ export const AuthContextProvider = ({
       if (_user) {
         setUser({
           uid: _user.uid,
-          email: _user.email,
-          displayName: _user.displayName,
+          email: _user.email!,
+          displayName: _user.displayName!,
         });
       } else {
         setUser(null);

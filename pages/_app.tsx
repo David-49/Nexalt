@@ -11,6 +11,7 @@ import { AuthContextProvider } from '../context/AuthContext';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
 import { mantineTheme } from '../theme';
 import { GlobalStyles } from '../theme/global';
+import { UserStatusContextProvider } from '../context/UserStatusContext';
 
 type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactNode) => ReactNode;
@@ -39,16 +40,18 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <AuthContextProvider>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
-        <GlobalStyles />
-        {noAuthRequired.includes(router.pathname) ? (
-          getLayout(<Component {...pageProps} />)
-        ) : (
-          <ProtectedRoute>
-            {getLayout(<Component {...pageProps} />)}
-          </ProtectedRoute>
-        )}
-      </MantineProvider>
+      <UserStatusContextProvider>
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
+          <GlobalStyles />
+          {noAuthRequired.includes(router.pathname) ? (
+            getLayout(<Component {...pageProps} />)
+          ) : (
+            <ProtectedRoute>
+              {getLayout(<Component {...pageProps} />)}
+            </ProtectedRoute>
+          )}
+        </MantineProvider>
+      </UserStatusContextProvider>
     </AuthContextProvider>
   );
 }
