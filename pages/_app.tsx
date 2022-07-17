@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ReactNode } from 'react';
 
 import '../styles/globals.css';
@@ -20,6 +21,10 @@ type NextPageWithLayout<P = {}> = NextPage<P> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+console.log(process.env.NODE_ENV === 'development' && 'development env');
+console.log(process.env.NODE_ENV === 'production' && 'production env');
+console.log(process.env.NODE_ENV === 'test' && 'test env');
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const noAuthRequired = [
