@@ -1,10 +1,11 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { Button, createStyles } from '@mantine/core';
 import { useRouter } from 'next/router';
 import { useAuth } from '../../../context/AuthContext';
 import LogosGoogleIcon from './LogosGoogleIcon';
 import { colors } from '../../../theme';
+import { useStatusUser } from '../../../context/UserStatusContext';
 
 interface IProps {
   label: string;
@@ -28,11 +29,41 @@ export const GoogleButtonConnection: FC<IProps> = (props) => {
   const { label } = props;
   const router = useRouter();
   const { classes } = useStyles();
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, user } = useAuth();
+  const { userStatus } = useStatusUser();
+  const [wasClicked, setWasClicked] = useState(false);
+
+  useEffect(() => {
+    const updateData = async () => {
+      if (user && wasClicked) {
+        const name = user.displayName.split(' ');
+        fetch('/api/inscription', {
+          method: 'POST',
+          body: JSON.stringify({
+            firstname: name[0],
+            lastname: name[1] ?? '',
+            email: user.email,
+          }),
+          headers: { 'Content-type': 'application/json; charset=UTF-8' },
+        });
+
+        if (userStatus) {
+          router.push('/profilePage');
+        } else {
+          router.push('/account_configuration');
+        }
+      }
+    };
+    try {
+      updateData();
+    } catch (error: any) {
+      throw new Error(error);
+    }
+  }, [userStatus]);
 
   const handleSignupWithGoogle = async () => {
     await signInWithGoogle();
-    router.push('/account_configuration');
+    setWasClicked(true);
   };
 
   return (
