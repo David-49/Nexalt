@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   Alert,
@@ -21,10 +21,11 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAuth } from '../../context/AuthContext';
-import { ILogin } from '../../types/Login';
+import { ISignin } from '../../types/Login';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { colors } from '../../theme';
 import ImageBackground from '../../public/assets/images/photo_3.jpg';
+import { useStatusUser } from '../../context/UserStatusContext';
 
 interface IProps {}
 
@@ -94,6 +95,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'column',
     height: '100%',
     width: '50%',
     paddingLeft: 10,
@@ -121,7 +123,6 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: colors.primaryBlue,
     fontWeight: 400,
     transition: 'ease 0.3s',
-
     ':hover': {
       backgroundColor: colors.secondaryBlue,
       transition: 'ease 0.3s',
@@ -154,8 +155,11 @@ const useStyles = createStyles((theme) => ({
 
 const SignIn: NextPage<IProps> = (props) => {
   const { classes } = useStyles();
+  const { user } = useAuth();
+  const { userStatus } = useStatusUser();
   const { signin } = useAuth();
   const [isConnectionFailed, setIsConnectionFailed] = useState(false);
+
   const router = useRouter();
 
   const form = useForm({
@@ -166,11 +170,20 @@ const SignIn: NextPage<IProps> = (props) => {
     },
   });
 
-  const handleLogin = async (data: ILogin) => {
+  useEffect(() => {
+    if (user) {
+      if (userStatus) {
+        router.push('/profilePage');
+      } else {
+        router.push('/account_configuration');
+      }
+    }
+  }, [userStatus]);
+
+  const handleLogin = async (data: ISignin) => {
     try {
       await signin(data.email, data.password);
       setIsConnectionFailed(false);
-      router.push('/');
     } catch (err: any) {
       setIsConnectionFailed(true);
     }

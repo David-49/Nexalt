@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   Alert,
@@ -21,7 +21,7 @@ import Link from 'next/link';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { PasswordStrength } from '../../components/Authentification/PasswordStrength';
 import { useAuth } from '../../context/AuthContext';
-import { ILogin } from '../../types/Login';
+import { ISignup } from '../../types/Login';
 import { colors } from '../../theme';
 import ImageBackground from '../../public/assets/images/photo_1.jpg';
 
@@ -89,8 +89,10 @@ const useStyles = createStyles((theme) => ({
   },
   rightChild: {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 20,
     height: '100%',
     width: '50%',
     paddingLeft: 10,
@@ -142,9 +144,10 @@ const useStyles = createStyles((theme) => ({
 
 const SignUp: NextPage<IProps> = (props) => {
   const { classes } = useStyles();
-  const { signup } = useAuth();
-  const [isInscriptionFailed, setIsInscriptionFailed] = useState(false);
+  const { signup, user } = useAuth();
   const router = useRouter();
+  const [loginValues, setLoginValues] = useState<ISignup>();
+  const [isInscriptionFailed, setIsInscriptionFailed] = useState(false);
 
   const schema = z
     .object({
@@ -170,11 +173,33 @@ const SignUp: NextPage<IProps> = (props) => {
     },
   });
 
-  const handleSignup = async (data: ILogin) => {
+  useEffect(() => {
+    const updateData = async () => {
+      if (user && loginValues) {
+        fetch('/api/inscription', {
+          method: 'POST',
+          body: JSON.stringify({
+            firstname: loginValues.firstname,
+            lastname: loginValues.lastname,
+            email: loginValues.email,
+          }),
+          headers: { 'Content-type': 'application/json; charset=UTF-8' },
+        });
+        setIsInscriptionFailed(false);
+        router.push('/account_configuration');
+      }
+    };
+    try {
+      updateData();
+    } catch (error) {
+      setIsInscriptionFailed(true);
+    }
+  }, [user, loginValues]);
+
+  const handleSignup = async (data: ISignup) => {
     try {
       await signup(data.email, data.password);
-      setIsInscriptionFailed(false);
-      router.push('/account_configuration');
+      setLoginValues(data);
     } catch (err: any) {
       setIsInscriptionFailed(true);
     }
@@ -209,11 +234,12 @@ const SignUp: NextPage<IProps> = (props) => {
           <Alert
             color="red"
             title="Échec de l'inscription !"
+            style={{ width: '60%' }}
             icon={<IconAlertCircle />}
           >
             Votre inscription à échouer.
             <br />
-            Veuillez réessayer !
+            Veuillez rééssayer !
           </Alert>
         )}
         <Group direction="column" align="center">

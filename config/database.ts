@@ -1,9 +1,10 @@
 import { Pool } from 'pg';
 
+const devConfig = `postgres://postgres:azerty@localhost:5432/nexalt-bdd`;
+
+const prodConfig = process.env.NEXT_PUBLIC_CON_URI;
+
 export const pool = new Pool({
-  host: 'localhost',
-  user: 'postgres',
-  password: 'azerty',
-  port: 5432,
-  database: 'nexaltDB',
+  connectionString:
+    process.env.NODE_ENV === 'production' ? prodConfig : devConfig,
 });

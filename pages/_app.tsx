@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ReactNode } from 'react';
 
 import '../styles/globals.css';
@@ -11,6 +12,7 @@ import { AuthContextProvider } from '../context/AuthContext';
 import { ProtectedRoute } from '../components/Authentification/ProtectedRoute';
 import { mantineTheme } from '../theme';
 import { GlobalStyles } from '../theme/global';
+import { UserStatusContextProvider } from '../context/UserStatusContext';
 
 type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactNode) => ReactNode;
@@ -19,6 +21,10 @@ type NextPageWithLayout<P = {}> = NextPage<P> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+console.log(process.env.NODE_ENV === 'development' && 'development env');
+console.log(process.env.NODE_ENV === 'production' && 'production env');
+console.log(process.env.NODE_ENV === 'test' && 'test env');
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const noAuthRequired = [
@@ -39,16 +45,18 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <AuthContextProvider>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
-        <GlobalStyles />
-        {noAuthRequired.includes(router.pathname) ? (
-          getLayout(<Component {...pageProps} />)
-        ) : (
-          <ProtectedRoute>
-            {getLayout(<Component {...pageProps} />)}
-          </ProtectedRoute>
-        )}
-      </MantineProvider>
+      <UserStatusContextProvider>
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={mantineTheme}>
+          <GlobalStyles />
+          {noAuthRequired.includes(router.pathname) ? (
+            getLayout(<Component {...pageProps} />)
+          ) : (
+            <ProtectedRoute>
+              {getLayout(<Component {...pageProps} />)}
+            </ProtectedRoute>
+          )}
+        </MantineProvider>
+      </UserStatusContextProvider>
     </AuthContextProvider>
   );
 }
