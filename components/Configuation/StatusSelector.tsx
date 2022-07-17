@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 
 import { Container, createStyles, Group, Text, Button } from '@mantine/core';
 import { colors } from '../../theme';
+import { useAuth } from '../../context/AuthContext';
 
 interface IProps {
   onSetActiveSteps: (data: number) => void;
@@ -51,6 +52,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const StatusSelector: FC<IProps> = (props) => {
+  const { user } = useAuth();
   const { classes } = useStyles();
   const { onSetActiveSteps, onSetStatusUser, statusUserSelected } = props;
 
@@ -58,6 +60,21 @@ const StatusSelector: FC<IProps> = (props) => {
     useState<string>(statusUserSelected);
 
   const handleOnValidation = () => {
+    const updateUserAccount = async () => {
+      fetch('/api/profil_configuration', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: user.email,
+          userStatus: statusSelected,
+        }),
+        headers: { 'Content-type': 'application/json; charset=UTF-8' },
+      });
+    };
+    try {
+      updateUserAccount();
+    } catch (error: any) {
+      throw new Error(error);
+    }
     onSetStatusUser(statusSelected);
     onSetActiveSteps(0);
   };
