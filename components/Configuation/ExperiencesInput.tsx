@@ -50,6 +50,12 @@ const useStyles = createStyles((theme) => ({
       borderColor: colors.primaryBlue,
     },
   },
+  input: {
+    width: '48%',
+    '@media (max-width: 1595px)': {
+      width: '100%',
+    },
+  },
 }));
 
 const ExperiencesInput: FC<IProps> = (props) => {
@@ -121,7 +127,7 @@ const ExperiencesInput: FC<IProps> = (props) => {
       <Group position="apart" style={{ width: '100%' }}>
         <TextInput
           styles={{ filledVariant: { backgroundColor: '#fff' } }}
-          style={{ width: '48%' }}
+          className={classes.input}
           size="lg"
           variant="filled"
           onChange={(e) => setCompany(e.target.value)}
@@ -131,7 +137,7 @@ const ExperiencesInput: FC<IProps> = (props) => {
         />
         <TextInput
           styles={{ filledVariant: { backgroundColor: '#fff' } }}
-          style={{ width: '48%' }}
+          className={classes.input}
           onChange={(e) => setPost(e.target.value)}
           value={post}
           size="lg"
@@ -143,7 +149,7 @@ const ExperiencesInput: FC<IProps> = (props) => {
       <Group position="apart" style={{ width: '100%' }}>
         <Autocomplete
           styles={{ filledVariant: { backgroundColor: '#fff' } }}
-          style={{ width: '48%' }}
+          className={classes.input}
           size="lg"
           variant="filled"
           classNames={{ input: edit ? classes.inputEdit : classes.inputAdd }}
@@ -156,7 +162,7 @@ const ExperiencesInput: FC<IProps> = (props) => {
         <TextInput
           styles={{ filledVariant: { backgroundColor: '#fff' } }}
           classNames={{ input: edit ? classes.inputEdit : classes.inputAdd }}
-          style={{ width: '48%' }}
+          className={classes.input}
           size="lg"
           onChange={(e) => setDuration(e.target.value)}
           value={duration}

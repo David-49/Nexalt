@@ -3,11 +3,11 @@ import { ReactElement, ReactNode } from 'react';
 import { NextPage } from 'next';
 import { Header } from '../../components/Header';
 
-type HomePageWithLayout = NextPage & {
+type PageWithLayout = NextPage & {
   getLayout: (page: ReactElement) => ReactNode;
 };
 
-const ResetPassword: HomePageWithLayout = () => (
+const ResetPassword: PageWithLayout = () => (
   <h1>Hello, c'est la page pour réinitialiser son mot de passe</h1>
 );
 

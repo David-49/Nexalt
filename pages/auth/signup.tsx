@@ -33,10 +33,13 @@ const useStyles = createStyles((theme) => ({
     height: '100vh',
     display: 'flex',
     justifyContent: 'stretch',
+    '@media (max-width: 851px)': {
+      flexDirection: 'column',
+    },
   },
   input: {
     borderWidth: 2,
-    ':focus': {
+    ':focus-within': {
       borderColor: colors.primaryBlue,
     },
   },
@@ -56,6 +59,9 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    '@media (max-width: 851px)': {
+      width: '100%',
+    },
   },
   tricks: {
     position: 'absolute',
@@ -67,6 +73,9 @@ const useStyles = createStyles((theme) => ({
     backgroundImage: `url('${ImageBackground.src}')`,
     backgroundPosition: 'top',
     backgroundRepeat: 'no-repeat',
+    '@media (max-width: 851px)': {
+      display: 'none',
+    },
   },
   whiteMaskBottom: {
     position: 'absolute',
@@ -97,6 +106,21 @@ const useStyles = createStyles((theme) => ({
     paddingRight: 10,
     borderTopLeftRadius: 50,
     backgroundColor: '#fff',
+    '@media (max-width: 851px)': {
+      paddingTop: 50,
+      borderTopLeftRadius: 0,
+      width: '100%',
+    },
+  },
+  containerConnexion: {
+    padding: 10,
+    '@media (max-width: 1500px)': {
+      width: '80%',
+    },
+    '@media (max-width: 982px)': {
+      width: '90%',
+      padding: 5,
+    },
   },
   title: {
     fontSize: 40,
@@ -129,6 +153,7 @@ const useStyles = createStyles((theme) => ({
     gap: 20,
     marginTop: 30,
     marginBottom: 30,
+    width: '100%',
   },
   divider: {
     color: '#0F0C2980',
@@ -216,7 +241,11 @@ const SignUp: NextPage<IProps> = (props) => {
             Veuillez réessayer !
           </Alert>
         )}
-        <Group direction="column" align="center">
+        <Group
+          direction="column"
+          align="center"
+          className={classes.containerConnexion}
+        >
           <Group position="apart" style={{ width: '100%' }}>
             <Title className={classes.title} order={1}>
               Inscription

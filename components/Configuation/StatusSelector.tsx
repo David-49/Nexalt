@@ -13,6 +13,19 @@ const useStyles = createStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
+    '@media (max-width: 1098px)': {
+      width: '100%',
+    },
+  },
+  containerSelector: {
+    gap: 50,
+    '@media (max-width: 1200px)': {
+      gap: 20,
+    },
+    '@media (max-width: 1098px)': {
+      justifyContent: 'center',
+      width: '100%',
+    },
   },
   btnSelectionStatus: {
     backgroundColor: colors.primaryBackgroundColor,
@@ -21,6 +34,10 @@ const useStyles = createStyles((theme) => ({
     minWidth: 328,
     ':hover': {
       backgroundColor: '#eeeeee',
+    },
+    borderWidth: 2,
+    '@media (max-width: 1098px)': {
+      width: '100%',
     },
   },
   selectedBtn: {
@@ -64,7 +81,7 @@ const StatusSelector: FC<IProps> = (props) => {
 
   return (
     <Container className={classes.container} fluid>
-      <Group spacing={50} position="apart">
+      <Group position="apart" className={classes.containerSelector}>
         <Button
           radius={15}
           className={`${classes.btnSelectionStatus} ${

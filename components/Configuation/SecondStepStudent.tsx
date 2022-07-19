@@ -28,6 +28,9 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     padding: 0,
     gap: 50,
+    '@media (max-width: 1098px)': {
+      flexDirection: 'column',
+    },
   },
   form: {
     display: 'flex',
@@ -35,9 +38,17 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     gap: 50,
   },
-  containerLeftSide: { width: '50%' },
+  containerLeftSide: {
+    width: '50%',
+    '@media (max-width: 1098px)': {
+      width: '100%',
+    },
+  },
   containerRightSide: {
     width: '50%',
+    '@media (max-width: 1098px)': {
+      width: '100%',
+    },
   },
   containerInput: {
     width: '100%',
@@ -80,7 +91,7 @@ const SecondStepStudent: FC<IProps> = (props) => {
   return (
     <Container className={classes.container} fluid>
       <Group className={classes.containerLeftSide} direction="column">
-        <Group direction="column" spacing={2}>
+        <Group direction="column" spacing={2} style={{ width: '100%' }}>
           <Text className={classes.label}>Vos expériences</Text>
           <Text className={classes.description}>
             Indiquez ce que vous voulez faire savoir aux entreprises qui vont
