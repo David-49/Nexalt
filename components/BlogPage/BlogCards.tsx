@@ -107,6 +107,7 @@ export const BlogCards: FC<IProps> = () => {
                       <Image src='/assets/images/blog_1.jpg'
                              width={4032}
                              height={3842}
+                             quality={75}
                              priority
                       />
                     </div>
@@ -124,6 +125,7 @@ export const BlogCards: FC<IProps> = () => {
                   <Image src='/assets/images/blog_2.jpg'
                          width={3555}
                          height={3842}
+                         quality={75}
                          priority
                   />
                 </div>
@@ -141,6 +143,7 @@ export const BlogCards: FC<IProps> = () => {
                       <Image src='/assets/images/blog_3.jpg'
                              width={3555}
                              height={3842}
+                             quality={75}
                              priority
                       />
                     </div>
@@ -160,6 +163,7 @@ export const BlogCards: FC<IProps> = () => {
                   <Image src='/assets/images/blog_4.jpg'
                          width={3555}
                          height={3842}
+                         quality={75}
                          priority
                   />
                 </div>
@@ -179,6 +183,7 @@ export const BlogCards: FC<IProps> = () => {
                 <Image src='/assets/images/blog_5.jpg'
                        width={3555}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
@@ -196,6 +201,7 @@ export const BlogCards: FC<IProps> = () => {
                   <Image src='/assets/images/blog_6.jpg'
                          width={3555}
                          height={3842}
+                         quality={75}
                          priority
                   />
                 </div>

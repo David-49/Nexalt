@@ -29,7 +29,7 @@ const useStyles = createStyles({
     flexDirection: 'column',
     justifyContent: 'center',
     width: 120,
-    height: '95vh',
+    height: '100%',
     backgroundColor: colors.primaryBlue,
     borderBottomRightRadius: 25,
     zIndex: 100,
@@ -47,12 +47,19 @@ const useStyles = createStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: 32,
   },
   firstMenu: {
     padding: 0,
     margin: 0,
     listStyle: 'none',
+  },
+  secondMenu: {
+    padding: 0,
+    margin: 0,
+    marginTop: 25,
+    marginRight: 0,
+    marginBottom: 0,
+    marginLeft: 0,
   },
   liMenu: {
     display: 'flex',
@@ -60,8 +67,7 @@ const useStyles = createStyles({
     justifyContent: 'center',
     width: 40,
     height: 40,
-    marginTop: 35,
-    marginBottom: 35,
+    marginBottom: 25,
     cursor: 'pointer',
   },
   icons: {
@@ -130,7 +136,7 @@ export const AppLayout: FC<IProps> = (props) => {
                 </List.Item>
               ))}
             </List>
-            <List className={classes.firstMenu}>
+            <List className={classes.secondMenu}>
               {SECOND_LIST_ICONS.map((icon) => (
                 <List.Item className={classes.liMenu} key={icon.id}>
                   <Link href={icon.url} passHref>
