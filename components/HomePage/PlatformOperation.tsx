@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Button, createStyles, Group, Title } from '@mantine/core';
+import Link from 'next/link';
 import { colors } from '../../theme';
 import { StrongPointsCard } from './StrongPointsCard';
 
@@ -81,9 +82,11 @@ export const PlatformOperation: FC<IProps> = (props) => {
           boxShadow="0px 5px 14px #0000001A"
         />
       </Group>
-      <Button radius={10} className={classes.btn}>
-        VOIR LA RECHERCHE
-      </Button>
+      <Link href="/research" passHref>
+        <Button component="a" radius={10} className={classes.btn}>
+          VOIR LA RECHERCHE
+        </Button>
+      </Link>
     </Group>
   );
 };
