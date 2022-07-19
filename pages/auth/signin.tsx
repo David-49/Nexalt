@@ -39,6 +39,9 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     padding: 0,
     justifyContent: 'stretch',
+    '@media (max-width: 851px)': {
+      flexDirection: 'column',
+    },
   },
   btn: {
     backgroundColor: colors.secondaryBlue,
@@ -59,6 +62,9 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
+    '@media (max-width: 851px)': {
+      width: '100%',
+    },
   },
   tricks: {
     position: 'absolute',
@@ -70,6 +76,9 @@ const useStyles = createStyles((theme) => ({
     backgroundImage: `url('${ImageBackground.src}')`,
     backgroundPosition: 'top',
     backgroundRepeat: 'no-repeat',
+    '@media (max-width: 851px)': {
+      display: 'none',
+    },
   },
   whiteMaskBottom: {
     position: 'absolute',
@@ -96,10 +105,23 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     height: '100%',
     width: '50%',
-    paddingLeft: 10,
-    paddingRight: 10,
     borderTopLeftRadius: 50,
     backgroundColor: '#fff',
+    '@media (max-width: 851px)': {
+      paddingTop: 50,
+      borderTopLeftRadius: 0,
+      width: '100%',
+    },
+  },
+  containerConnexion: {
+    padding: 10,
+    '@media (max-width: 1500px)': {
+      width: '80%',
+    },
+    '@media (max-width: 982px)': {
+      width: '90%',
+      padding: 5,
+    },
   },
   title: {
     fontSize: 40,
@@ -149,6 +171,12 @@ const useStyles = createStyles((theme) => ({
   },
   containerGoogleConnection: {
     width: '100%',
+  },
+  input: {
+    borderWidth: 2,
+    ':focus-within': {
+      border: `solid 2px ${colors.primaryBlue}`,
+    },
   },
 }));
 
@@ -213,7 +241,11 @@ const SignIn: NextPage<IProps> = (props) => {
             Veuillez réessayez.
           </Alert>
         )}
-        <Group direction="column" align="center" style={{ width: '60%' }}>
+        <Group
+          direction="column"
+          align="center"
+          className={classes.containerConnexion}
+        >
           <Group position="apart" style={{ width: '100%' }}>
             <Title className={classes.title} order={1}>
               Connexion
@@ -235,14 +267,8 @@ const SignIn: NextPage<IProps> = (props) => {
           >
             <TextInput
               placeholder="Adresse mail"
-              styles={{
-                input: {
-                  borderWidth: 2,
-                  ':focus': {
-                    borderWidth: 2,
-                    borderColor: colors.primaryBlue,
-                  },
-                },
+              classNames={{
+                input: classes.input,
               }}
               radius={15}
               required
@@ -252,14 +278,8 @@ const SignIn: NextPage<IProps> = (props) => {
             />
             <PasswordInput
               placeholder="Mot de passe"
-              styles={{
-                input: {
-                  borderWidth: 2,
-                  ':focus-within': {
-                    borderWidth: 2,
-                    borderColor: colors.primaryBlue,
-                  },
-                },
+              classNames={{
+                input: classes.input,
               }}
               required
               radius={15}

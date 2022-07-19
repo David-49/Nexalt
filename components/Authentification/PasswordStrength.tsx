@@ -27,7 +27,7 @@ export const PasswordStrength: FC<IProps> = (props) => {
   const requirements = [
     { re: /[0-9]/, label: 'Inclut un nombre' },
     { re: /[a-z]/, label: 'Inclut une lettre minuscule' },
-    { re: /[A-Z]/, label: 'Includes une lettre majuscule' },
+    { re: /[A-Z]/, label: 'Inclut une lettre majuscule' },
     { re: /[$&+,:;=?@#|'<>.^*()%!-]/, label: 'Inclut un caractère spécial' },
   ];
 

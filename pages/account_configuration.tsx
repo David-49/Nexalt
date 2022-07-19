@@ -12,6 +12,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IconChevronLeft } from '@tabler/icons';
 import { useRouter } from 'next/router';
+import { useMediaQuery } from '@mantine/hooks';
 import { colors } from '../theme';
 import StatusSelector from '../components/Configuation/StatusSelector';
 import FirstStepStudent from '../components/Configuation/FirstStepStudent';
@@ -30,6 +31,9 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'stretch',
+    '@media (max-width: 780px)': {
+      flexDirection: 'column',
+    },
   },
   leftSide: {
     backgroundColor: colors.primaryBlue,
@@ -37,6 +41,13 @@ const useStyles = createStyles((theme) => ({
     width: '30%',
     paddingTop: 56,
     paddingLeft: 50,
+    '@media (max-width: 1098px)': {
+      width: '45%',
+    },
+    '@media (max-width: 780px)': {
+      width: '100%',
+      paddingBottom: 56,
+    },
   },
   leftSideChild: {
     display: 'flex',
@@ -60,6 +71,26 @@ const useStyles = createStyles((theme) => ({
     width: '70%',
     display: 'flex',
     flexDirection: 'column',
+    paddingTop: 80,
+    paddingBottom: 80,
+    paddingLeft: 100,
+    paddingRight: 100,
+    '@media (max-width: 1340px)': {
+      paddingTop: 80,
+      paddingBottom: 80,
+      paddingLeft: 50,
+      paddingRight: 50,
+    },
+    '@media (max-width: 1200px)': {
+      paddingTop: 80,
+      paddingBottom: 80,
+      paddingLeft: 30,
+      paddingRight: 30,
+    },
+    '@media (max-width: 780px)': {
+      width: '100%',
+      margin: 0,
+    },
   },
   titleRightSide: {
     fontSize: 40,
@@ -74,10 +105,8 @@ const useStyles = createStyles((theme) => ({
     },
   },
   skipBtn: {
-    fontWeight: 800,
     color: colors.primaryBlue,
     backgroundColor: colors.primaryBackgroundColor,
-    width: 300,
     transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: '#dfdbff',
@@ -86,13 +115,21 @@ const useStyles = createStyles((theme) => ({
   },
   nextBtn: {
     backgroundColor: colors.primaryBlue,
-    fontWeight: 800,
     color: '#fff',
-    width: 300,
     transition: 'ease 0.3s',
     ':hover': {
       backgroundColor: colors.secondaryBlue,
       transition: 'ease 0.3s',
+    },
+  },
+  btn: {
+    width: 300,
+    fontWeight: 800,
+    '@media (max-width: 1490px)': {
+      width: 200,
+    },
+    '@media (max-width: 1098px)': {
+      width: 150,
     },
   },
 }));
@@ -191,7 +228,7 @@ const AccountConfiguration: FC<IProps> = (props) => {
       setActiveSteps((previousSteps) => previousSteps + 1);
     }
     if (activeSteps === 1 && statusSelected === 'student') {
-      router.push('/profilePage');
+      router.push('/dashboard');
     }
   };
 
@@ -219,6 +256,8 @@ const AccountConfiguration: FC<IProps> = (props) => {
     return 'Deux types de comptes sont disponibles sur nexalt pour son bon fonctionnement.';
   }, [activeSteps, statusSelected]);
 
+  const mediumScreen = useMediaQuery('(max-width: 1098px)');
+
   return (
     <div className={classes.container}>
       <main className={classes.main}>
@@ -241,14 +280,7 @@ const AccountConfiguration: FC<IProps> = (props) => {
             <Text className={classes.description}>{description}</Text>
           </div>
         </div>
-        <Container
-          pt={80}
-          pl={100}
-          pr={100}
-          pb={80}
-          fluid
-          className={classes.rightSide}
-        >
+        <Container fluid className={classes.rightSide}>
           <Title pb={60} className={classes.titleRightSide} order={1}>
             Inscription
           </Title>
@@ -273,11 +305,11 @@ const AccountConfiguration: FC<IProps> = (props) => {
               style={{ marginTop: 'auto' }}
             >
               <Button
-                size="xl"
                 radius={15}
                 variant="subtle"
                 leftIcon={<IconChevronLeft />}
                 className={classes.backBtn}
+                size={mediumScreen ? 'md' : 'xl'}
                 onClick={() => handleGoToPreviousSteps()}
               >
                 Précédent
@@ -285,17 +317,17 @@ const AccountConfiguration: FC<IProps> = (props) => {
               <Group align="center" spacing={20}>
                 <Button
                   radius={15}
-                  className={classes.skipBtn}
-                  size="xl"
+                  className={`${classes.skipBtn} ${classes.btn}`}
                   variant="light"
+                  size={mediumScreen ? 'md' : 'xl'}
                   onClick={() => handleSkipStep()}
                 >
                   Remplir plus tard
                 </Button>
                 <Button
-                  className={classes.nextBtn}
+                  className={`${classes.nextBtn} ${classes.btn}`}
                   radius={15}
-                  size="xl"
+                  size={mediumScreen ? 'md' : 'xl'}
                   onClick={() => handleGoToNextSteps()}
                 >
                   {activeSteps === 1 ? 'Terminer' : 'Suivant'}

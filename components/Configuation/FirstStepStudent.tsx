@@ -37,10 +37,24 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     gap: 50,
+    '@media (max-width: 1098px)': {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '98%',
+    },
   },
-  formLeftSide: { width: '50%' },
+  formLeftSide: {
+    width: '50%',
+    '@media (max-width: 1098px)': {
+      width: '100%',
+    },
+  },
   formRightSide: {
     width: '50%',
+    '@media (max-width: 1098px)': {
+      width: '100%',
+    },
   },
   containerInput: {
     width: '100%',

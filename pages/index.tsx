@@ -53,11 +53,18 @@ const useStyles = createStyles((theme) => ({
     width: '65%',
     zIndex: 4,
     position: 'relative',
+    '@media (max-width: 1080px)': {
+      width: '100%',
+    },
   },
   containerFilter: {
     marginTop: 55,
     zIndex: 4,
     position: 'relative',
+    width: '68%',
+    '@media (max-width: 1215px)': {
+      width: '100%',
+    },
   },
   womanImageContainer: {
     position: 'absolute',
@@ -66,6 +73,9 @@ const useStyles = createStyles((theme) => ({
     zIndex: 0,
     '@media (max-width: 1450px)': {
       right: 100,
+    },
+    '@media (max-width: 1215px)': {
+      display: 'none',
     },
   },
   firstBackgroundDecorationContainer: {
