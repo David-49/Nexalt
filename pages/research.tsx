@@ -28,11 +28,11 @@ const useStyles = createStyles({
     position: 'fixed',
     backgroundColor: colors.secondaryBlue,
     width: 480,
-    height: '95vh',
+    height: '100%',
     borderBottomRightRadius: 25,
     zIndex: 2,
     '@media (max-width: 1820px)': {
-      width: 384,
+      width: 400,
     },
   },
   filterInner: {
@@ -130,6 +130,12 @@ const useStyles = createStyles({
       paddingBottom: 0,
       paddingLeft: '32%',
     },
+    '@media (max-width: 1345px)': {
+      paddingTop: '2%',
+      paddingRight: '3%',
+      paddingBottom: 0,
+      paddingLeft: '33%',
+    },
   },
   innerSearchResult: {
     display: 'flex',
@@ -224,7 +230,7 @@ const useStyles = createStyles({
     top: -35,
   },
   p2: {
-    top: -35,
+    top: -15,
   },
   p3: {
     top: -45,
@@ -431,6 +437,8 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      quality={75}
+                      objectFit='cover'
                     />
                   </div>
                 </div>
@@ -455,12 +463,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Yvette Weir</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -479,12 +489,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Letitia Alvarez</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -503,16 +515,18 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Nigel Marriott</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
-                    <span className={classes.year}>3ème</span>
+                    <span className={classes.year}>2ème</span>
                     <span className={classes.yearText}>année</span>
                   </div>
                 </div>
@@ -527,12 +541,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Dane Daniels</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -551,16 +567,18 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Hanan Chen</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
-                    <span className={classes.year}>3ème</span>
+                    <span className={classes.year}>2ème</span>
                     <span className={classes.yearText}>année</span>
                   </div>
                 </div>
@@ -575,12 +593,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Adeeb Halliday</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -599,12 +619,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Sohail Cairns</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -623,12 +645,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Finnley Firth</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -647,16 +671,18 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Reya Booth</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
-                    <span className={classes.year}>3ème</span>
+                    <span className={classes.year}>2ème</span>
                     <span className={classes.yearText}>année</span>
                   </div>
                 </div>
@@ -671,12 +697,14 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Gilbert Knowles</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
@@ -695,16 +723,18 @@ const Research: PageWithLayout = () => {
                       alt="student"
                       width="1080"
                       height="1400"
+                      objectFit='cover'
+                      quality={75}
                     />
                   </div>
                 </div>
                 <div className={classes.cardContent}>
                   <div className={classes.firstCardContent}>
-                    <span className={classes.name}>Margaux Dupuis</span>
+                    <span className={classes.name}>Vienna Vaughn</span>
                     <span className={classes.job}>Webdesign</span>
                   </div>
                   <div className={classes.secondCardContent}>
-                    <span className={classes.year}>3ème</span>
+                    <span className={classes.year}>2ème</span>
                     <span className={classes.yearText}>année</span>
                   </div>
                 </div>

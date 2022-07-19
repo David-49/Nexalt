@@ -147,7 +147,11 @@ const Blog: NextPage<IProps> = () => {
                         <div className={classes.blueShapeTop} />
                         <div className={classes.containerWhiteBlockTop}>
                             <div className={classes.photoGroupContainer}>
-                                <Image src='/assets/images/blog_picture.png' width={2505} height={4819} priority />
+                                <Image src='/assets/images/blog_picture.png'
+                                       width={2505}
+                                       height={4819}
+                                       quality={75}
+                                       priority />
                             </div>
                             <Title order={1}>
                                 <Text

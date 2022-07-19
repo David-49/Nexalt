@@ -38,11 +38,11 @@ const useStyles = createStyles({
     position: 'fixed',
     backgroundColor: colors.secondaryBlue,
     width: 480,
-    height: '95vh',
+    height: '100%',
     borderBottomRightRadius: 25,
     zIndex: 2,
     '@media (max-width: 1820px)': {
-      width: 384,
+      width: 400,
     },
   },
   boardInner: {
@@ -150,34 +150,6 @@ const useStyles = createStyles({
     marginRight: 15,
     fill: colors.secondaryBackgroundColor,
   },
-  boardResult: {
-    paddingTop: '2%',
-    paddingRight: '5%',
-    paddingBottom: 0,
-    paddingLeft: '30%',
-    '@media (max-width: 1820px)': {
-      paddingTop: '2%',
-      paddingRight: '5%',
-      paddingBottom: 0,
-      paddingLeft: '25%',
-    },
-    '@media (max-width: 1700px)': {
-      paddingTop: '2%',
-      paddingRight: '5%',
-      paddingBottom: 0,
-      paddingLeft: '32%',
-    },
-  },
-  innerBoardResult: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  topBoard: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
-  },
   h2: {
     fontFamily: 'Poppins, sans-serif',
     fontSize: 30,
@@ -204,6 +176,12 @@ const useStyles = createStyles({
       paddingRight: '5%',
       paddingBottom: 0,
       paddingLeft: '32%',
+    },
+    '@media (max-width: 1345px)': {
+      paddingTop: '2%',
+      paddingRight: '3%',
+      paddingBottom: 0,
+      paddingLeft: '33%',
     },
   },
   innerProfileResult: {
@@ -250,7 +228,7 @@ const useStyles = createStyles({
   },
   h1: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 800,
     color: colors.blackText,
     margin: 0,
@@ -271,7 +249,7 @@ const useStyles = createStyles({
   },
   identityCategory: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 600,
     color: colors.blackText,
   },
@@ -291,7 +269,7 @@ const useStyles = createStyles({
   },
   localisationText: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 400,
     color: colors.blackText,
     marginLeft: 15,
@@ -307,7 +285,7 @@ const useStyles = createStyles({
   },
   recommandationText: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 400,
     color: colors.blackText,
     marginLeft: 15,
@@ -320,13 +298,13 @@ const useStyles = createStyles({
   },
   studiesYear: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 36,
+    fontSize: 30,
     fontWeight: 700,
     color: colors.blackText,
   },
   studiesYearText: {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 400,
     color: '#87859EFF',
   },
@@ -373,10 +351,7 @@ const useStyles = createStyles({
   firstPartContent: {
     display: 'flex',
     flexDirection: 'column',
-    width: 800,
-    '@media (max-width: 1700px)': {
-      width: 420,
-    },
+    width: '100%',
   },
   profileContent: {
     display: 'flex',
@@ -568,10 +543,7 @@ const useStyles = createStyles({
   secondPartContent: {
     display: 'flex',
     flexDirection: 'column',
-    width: 400,
-    '@media (max-width: 1700px)': {
-      width: 360,
-    },
+    width: '100%',
   },
   langContent: {
     display: 'flex',

@@ -155,12 +155,13 @@ export const OurTeam: FC<IProps> = () => {
                 <Image src='/assets/images/photo_lilian.png'
                        width={3555}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
               <div className={classes.content}>
                 <span className={classes.teamName}>Lilian BEILLARD</span>
-                <span className={classes.teamJob}>Backelor Webdesigner</span>
+                <span className={classes.teamJob}>Bachelor Webdesigner</span>
               </div>
               <ul className={classes.socialNetworks}>
                 <li className={classes.network}>
@@ -211,12 +212,13 @@ export const OurTeam: FC<IProps> = () => {
                 <Image src='/assets/images/photo_bastien.png'
                        width={3555}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
               <div className={classes.content}>
                 <span className={classes.teamName}>Bastien ROBERT</span>
-                <span className={classes.teamJob}>Backelor Webdesigner</span>
+                <span className={classes.teamJob}>Bachelor Webdesigner</span>
               </div>
               <ul className={classes.socialNetworks}>
                 <li className={classes.network}>
@@ -269,6 +271,7 @@ export const OurTeam: FC<IProps> = () => {
                 <Image src='/assets/images/photo_naomi.png'
                        width={3555}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
@@ -325,12 +328,13 @@ export const OurTeam: FC<IProps> = () => {
                 <Image src='/assets/images/photo_sandy.png'
                        width={3800}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
               <div className={classes.content}>
                 <span className={classes.teamName}>Sandy MARTIN</span>
-                <span className={classes.teamJob}>Backelor E-Business</span>
+                <span className={classes.teamJob}>Bachelor E-Business</span>
               </div>
               <ul className={classes.socialNetworks}>
                 <li className={classes.network}>
@@ -381,6 +385,7 @@ export const OurTeam: FC<IProps> = () => {
                 <Image src='/assets/images/photo_david.png'
                        width={3555}
                        height={3842}
+                       quality={75}
                        priority
                 />
               </div>
@@ -435,7 +440,5 @@ export const OurTeam: FC<IProps> = () => {
           </div>
         </div>
       </div>
-
-
   );
 };

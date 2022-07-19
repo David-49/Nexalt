@@ -8,6 +8,7 @@ const useStyles = createStyles((theme) => ({
   logoE: {
     width: 30,
     fill: colors.secondaryBackgroundColor,
+    marginBottom: '2vh',
   },
 }));
 

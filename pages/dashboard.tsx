@@ -69,11 +69,11 @@ const useStyles = createStyles({
     position: 'fixed',
     backgroundColor: colors.secondaryBlue,
     width: 480,
-    height: '95vh',
+    height: '100%',
     borderBottomRightRadius: 25,
     zIndex: 2,
     '@media (max-width: 1820px)': {
-      width: 384,
+      width: 400,
     },
   },
   boardInner: {
@@ -186,6 +186,12 @@ const useStyles = createStyles({
       paddingRight: '5%',
       paddingBottom: 0,
       paddingLeft: '32%',
+    },
+    '@media (max-width: 1345px)': {
+      paddingTop: '2%',
+      paddingRight: '3%',
+      paddingBottom: 0,
+      paddingLeft: '33%',
     },
   },
   innerBoardResult: {
@@ -368,13 +374,14 @@ const useStyles = createStyles({
     marginRight: 10,
   },
   contentGroup: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: 20,
+    gridAutoRows: 'minmax(100px, auto)',
     marginTop: 15,
   },
   visibilityContent: {
-    display: 'flex',
+    display: 'grid',
     flexDirection: 'column',
     alignItems: 'flex-start',
     paddingTop: 25,
@@ -383,10 +390,7 @@ const useStyles = createStyles({
     paddingLeft: 30,
     backgroundColor: colors.primaryBackgroundColor,
     borderRadius: 15,
-    width: 360,
-    '@media (max-width: 1700px)': {
-      width: 233.6,
-    },
+    width: '100%',
   },
   visibilityInnerContent: {
     display: 'flex',
