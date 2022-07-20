@@ -100,6 +100,7 @@ const useStyles = createStyles((theme) => ({
   rightChild: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
     width: '50%',

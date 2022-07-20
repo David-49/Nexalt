@@ -103,6 +103,7 @@ const useStyles = createStyles((theme) => ({
   rightChild: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
     width: '50%',
@@ -199,7 +200,7 @@ const SignIn: NextPage<IProps> = (props) => {
     try {
       await signin(data.email, data.password);
       setIsConnectionFailed(false);
-      router.push('/');
+      router.push('/dashboard');
     } catch (err: any) {
       setIsConnectionFailed(true);
     }
