@@ -18,6 +18,7 @@ import { useRouter } from 'next/router';
 import { z } from 'zod';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
 import { PasswordStrength } from '../../components/Authentification/PasswordStrength';
 import { useAuth } from '../../context/AuthContext';
@@ -206,138 +207,144 @@ const SignUp: NextPage<IProps> = (props) => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.leftChild}>
-        <div className={classes.whiteMaskBottom} />
-        <div className={classes.tricks} />
-        <Link href="/">
-          <a>
-            <Image
-              src="/assets/logo_blanc.svg"
-              alt="Logo de Nexalt"
-              width={120}
-              height={40}
-              priority
-            />
-          </a>
-        </Link>
-        <Text color="#fff" className={classes.text}>
-          <span className={classes.heightSpan} style={{ fontWeight: 800 }}>
-            Étudiants,
-          </span>
-          <span className={classes.heightSpan}>Accédez à de</span>
-          <span className={classes.heightSpan}> nouvelles opportunités</span>
-        </Text>
-      </div>
-      <div className={classes.rightChild}>
-        {isInscriptionFailed && (
-          <Alert
-            color="red"
-            title="Échec de l'inscription !"
-            icon={<IconAlertCircle />}
-          >
-            Votre inscription à échouer.
-            <br />
-            Veuillez réessayer !
-          </Alert>
-        )}
-        <Group
-          direction="column"
-          align="center"
-          className={classes.containerConnexion}
-        >
-          <Group position="apart" style={{ width: '100%' }}>
-            <Title className={classes.title} order={1}>
-              Inscription
-            </Title>
-            <Link href="/auth/signin" passHref>
-              <Button
-                component="a"
-                size="lg"
-                radius={10}
-                className={classes.connectionBtn}
-              >
-                Me connecter
-              </Button>
-            </Link>
-          </Group>
-          <form
-            className={classes.form}
-            onSubmit={form.onSubmit((values) => handleSignup(values))}
-          >
-            <Group grow>
-              <TextInput
-                classNames={{ input: classes.input }}
-                radius={15}
-                required
-                placeholder="Prénom"
-                variant="filled"
-                size="xl"
-                {...form.getInputProps('firstname')}
+    <>
+      <Head>
+        <title>Inscription</title>
+      </Head>
+      <div className={classes.container}>
+        <div className={classes.leftChild}>
+          <div className={classes.whiteMaskBottom} />
+          <div className={classes.tricks} />
+          <Link href="/">
+            <a>
+              <Image
+                src="/assets/logo_blanc.svg"
+                alt="Logo de Nexalt"
+                width={120}
+                height={40}
+                priority
               />
-              <TextInput
-                classNames={{ input: classes.input }}
-                radius={15}
-                required
-                placeholder="Nom"
-                variant="filled"
-                size="xl"
-                {...form.getInputProps('lastname')}
-              />
-            </Group>
-            <TextInput
-              classNames={{ input: classes.input }}
-              radius={15}
-              required
-              placeholder="Email"
-              variant="filled"
-              size="xl"
-              {...form.getInputProps('email')}
-            />
-            <PasswordStrength
-              placeholder="Mot de passe"
-              formData={form}
-              formMethods={form.getInputProps('password')}
-            />
-            <PasswordInput
-              styles={{
-                input: {
-                  borderWidth: 2,
-                  ':focus-within': {
-                    borderWidth: 2,
-                    borderColor: colors.primaryBlue,
-                  },
-                },
-              }}
-              radius={15}
-              size="xl"
-              required
-              placeholder="Confirmer votre mot de passe"
-              variant="filled"
-              {...form.getInputProps('confirm')}
-            />
-            <Button
-              radius={15}
-              type="submit"
-              mt={30}
-              size="lg"
-              className={classes.inscriptionBtn}
+            </a>
+          </Link>
+          <Text color="#fff" className={classes.text}>
+            <span className={classes.heightSpan} style={{ fontWeight: 800 }}>
+              Étudiants,
+            </span>
+            <span className={classes.heightSpan}>Accédez à de</span>
+            <span className={classes.heightSpan}> nouvelles opportunités</span>
+          </Text>
+        </div>
+        <div className={classes.rightChild}>
+          {isInscriptionFailed && (
+            <Alert
+              color="red"
+              title="Échec de l'inscription !"
+              icon={<IconAlertCircle />}
+              style={{ width: '60%' }}
             >
-              M'inscrire
-            </Button>
-          </form>
-          <Divider
-            size="sm"
-            className={classes.divider}
-            label="ou"
-            labelPosition="center"
-          />
-          <div className={classes.containerGoogleConnection}>
-            <GoogleButtonConnection label="Je m'inscris avec Google" />
-          </div>
-        </Group>
+              Votre inscription à échouer.
+              <br />
+              Veuillez réessayer !
+            </Alert>
+          )}
+          <Group
+            direction="column"
+            align="center"
+            className={classes.containerConnexion}
+          >
+            <Group position="apart" style={{ width: '100%' }}>
+              <Title className={classes.title} order={1}>
+                Inscription
+              </Title>
+              <Link href="/auth/signin" passHref>
+                <Button
+                  component="a"
+                  size="lg"
+                  radius={10}
+                  className={classes.connectionBtn}
+                >
+                  Me connecter
+                </Button>
+              </Link>
+            </Group>
+            <form
+              className={classes.form}
+              onSubmit={form.onSubmit((values) => handleSignup(values))}
+            >
+              <Group grow>
+                <TextInput
+                  classNames={{ input: classes.input }}
+                  radius={15}
+                  required
+                  placeholder="Prénom"
+                  variant="filled"
+                  size="xl"
+                  {...form.getInputProps('firstname')}
+                />
+                <TextInput
+                  classNames={{ input: classes.input }}
+                  radius={15}
+                  required
+                  placeholder="Nom"
+                  variant="filled"
+                  size="xl"
+                  {...form.getInputProps('lastname')}
+                />
+              </Group>
+              <TextInput
+                classNames={{ input: classes.input }}
+                radius={15}
+                required
+                placeholder="Email"
+                variant="filled"
+                size="xl"
+                {...form.getInputProps('email')}
+              />
+              <PasswordStrength
+                placeholder="Mot de passe"
+                formData={form}
+                formMethods={form.getInputProps('password')}
+              />
+              <PasswordInput
+                styles={{
+                  input: {
+                    borderWidth: 2,
+                    ':focus-within': {
+                      borderWidth: 2,
+                      borderColor: colors.primaryBlue,
+                    },
+                  },
+                }}
+                radius={15}
+                size="xl"
+                required
+                placeholder="Confirmer votre mot de passe"
+                variant="filled"
+                {...form.getInputProps('confirm')}
+              />
+              <Button
+                radius={15}
+                type="submit"
+                mt={30}
+                size="lg"
+                className={classes.inscriptionBtn}
+              >
+                M'inscrire
+              </Button>
+            </form>
+            <Divider
+              size="sm"
+              className={classes.divider}
+              label="ou"
+              labelPosition="center"
+            />
+            <div className={classes.containerGoogleConnection}>
+              <GoogleButtonConnection label="Je m'inscris avec Google" />
+            </div>
+          </Group>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
