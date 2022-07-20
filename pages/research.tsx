@@ -306,6 +306,39 @@ const useStyles = createStyles({
     fontWeight: 400,
     color: '#87859EFF',
   },
+  logOutBtn: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 345,
+    '@media (max-width: 1820px)': {
+      marginTop: 345,
+    },
+  },
+  textlogOutBtn: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  logName: {
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: 18,
+    fontWeight: 700,
+    color: colors.secondaryBackgroundColor
+  },
+  logEmail: {
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: 14,
+    fontWeight: 400,
+    color: colors.tertiaryBlue
+  },
+  svgLogOut: {
+    width: 30,
+    marginLeft: 30,
+    fill: colors.tertiaryBlue,
+    '@media (max-width: 1820px)': {
+      marginLeft: 15,
+    },
+  },
 });
 
 const Research: PageWithLayout = () => {
@@ -390,6 +423,26 @@ const Research: PageWithLayout = () => {
               <span className={classes.textFilterSearchButton}>Rechercher</span>
             </button>
           </form>
+          <Link href="/">
+            <a className={classes.logOutBtn}>
+              <div className={classes.textlogOutBtn}>
+                <span className={classes.logName}>Bastien</span>
+                <span className={classes.logEmail}>pro.bastienrobert@gmail.com</span>
+              </div>
+              <svg
+                  className={classes.svgLogOut}
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                  x="0px"
+                  y="0px"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24">
+                <path
+                    d="M5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5
+                    3h7v2H5v14h7v2Zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5Z" />
+              </svg>
+            </a>
+          </Link>
         </div>
       </section>
 
