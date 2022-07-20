@@ -68,7 +68,7 @@ export const PriceForStudent: FC<IProps> = (props) => {
         <Title className={classes.title} order={2}>
           Pour les édudiants
         </Title>
-        <span className={classes.forStudentPrice}>10€/semaines</span>
+        <span className={classes.forStudentPrice}>20€/mois</span>
       </div>
       <p className={classes.forStudentText}>En souscrivant à cette option, cela vous assure de remonter dans le classement des offres et d’avoir un placement privilégié.
           Qu’attendez-vous ?</p>

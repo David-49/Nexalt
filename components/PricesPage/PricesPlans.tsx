@@ -164,7 +164,7 @@ export const PricesPlans: FC<IProps> = () => {
         <div className={classes.allPrices}>
             <div className={classes.priceCard} style={{transform: 'scale(0.90)',}}>
               <div className={classes.priceTitleContent}>
-                <span className={classes.priceTitle}>Formule par jours</span>
+                <span className={classes.priceTitle}>Formule par jour</span>
                 <span className={classes.priceCost}>200€</span>
               </div>
               <ul className={classes.adventageList}>
@@ -205,7 +205,7 @@ export const PricesPlans: FC<IProps> = () => {
             </div>
             <div className={classes.priceCard} style={{backgroundColor: colors.primaryBlue,}}>
               <div className={classes.priceTitleContent} >
-                <span className={classes.priceTitle} style={{color: colors.secondaryBackgroundColor,}}>Formule par semaines</span>
+                <span className={classes.priceTitle} style={{color: colors.secondaryBackgroundColor,}}>Formule par semaine</span>
                 <span className={classes.priceCost} style={{color: colors.secondaryBackgroundColor,}}>500€</span>
               </div>
               <ul className={classes.adventageList}>
