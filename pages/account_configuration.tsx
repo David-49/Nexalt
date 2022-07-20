@@ -13,6 +13,7 @@ import Image from 'next/image';
 import { IconChevronLeft } from '@tabler/icons';
 import { useRouter } from 'next/router';
 import { useMediaQuery } from '@mantine/hooks';
+import Head from 'next/head';
 import { colors } from '../theme';
 import StatusSelector from '../components/Configuation/StatusSelector';
 import FirstStepStudent from '../components/Configuation/FirstStepStudent';
@@ -259,85 +260,90 @@ const AccountConfiguration: FC<IProps> = (props) => {
   const mediumScreen = useMediaQuery('(max-width: 1098px)');
 
   return (
-    <div className={classes.container}>
-      <main className={classes.main}>
-        <div className={classes.leftSide}>
-          <Link href="/">
-            <a>
-              <Image
-                src="/assets/logo_blanc.svg"
-                alt="Logo de Nexalt"
-                width={120}
-                height={40}
-                priority
-              />
-            </a>
-          </Link>
-          <div className={classes.leftSideChild}>
-            <Title className={classes.titleLeftSide} order={2}>
-              {label}
-            </Title>
-            <Text className={classes.description}>{description}</Text>
-          </div>
-        </div>
-        <Container fluid className={classes.rightSide}>
-          <Title pb={60} className={classes.titleRightSide} order={1}>
-            Inscription
-          </Title>
-          {activeSteps === -1 && (
-            <StatusSelector
-              onSetActiveSteps={setActiveSteps}
-              onSetStatusUser={setStatusSelected}
-              statusUserSelected={statusSelected}
-            />
-          )}
-          {statusSelected === 'student' && (
-            <div style={{ paddingBottom: 50 }}>
-              {STEPS_COMPONENTS_STUDENT[activeSteps]}
+    <>
+      <Head>
+        <title>Configuation de compte</title>
+      </Head>
+      <div className={classes.container}>
+        <main className={classes.main}>
+          <div className={classes.leftSide}>
+            <Link href="/">
+              <a>
+                <Image
+                  src="/assets/logo_blanc.svg"
+                  alt="Logo de Nexalt"
+                  width={120}
+                  height={40}
+                  priority
+                />
+              </a>
+            </Link>
+            <div className={classes.leftSideChild}>
+              <Title className={classes.titleLeftSide} order={2}>
+                {label}
+              </Title>
+              <Text className={classes.description}>{description}</Text>
             </div>
-          )}
-          {statusSelected === 'companies' &&
-            STEPS_COMPONENTS_COMPANY[activeSteps]}
-          {activeSteps >= 0 && (
-            <Group
-              align="center"
-              position="apart"
-              style={{ marginTop: 'auto' }}
-            >
-              <Button
-                radius={15}
-                variant="subtle"
-                leftIcon={<IconChevronLeft />}
-                className={classes.backBtn}
-                size={mediumScreen ? 'md' : 'xl'}
-                onClick={() => handleGoToPreviousSteps()}
+          </div>
+          <Container fluid className={classes.rightSide}>
+            <Title pb={60} className={classes.titleRightSide} order={1}>
+              Inscription
+            </Title>
+            {activeSteps === -1 && (
+              <StatusSelector
+                onSetActiveSteps={setActiveSteps}
+                onSetStatusUser={setStatusSelected}
+                statusUserSelected={statusSelected}
+              />
+            )}
+            {statusSelected === 'student' && (
+              <div style={{ paddingBottom: 50 }}>
+                {STEPS_COMPONENTS_STUDENT[activeSteps]}
+              </div>
+            )}
+            {statusSelected === 'companies' &&
+              STEPS_COMPONENTS_COMPANY[activeSteps]}
+            {activeSteps >= 0 && (
+              <Group
+                align="center"
+                position="apart"
+                style={{ marginTop: 'auto' }}
               >
-                Précédent
-              </Button>
-              <Group align="center" spacing={20}>
                 <Button
                   radius={15}
-                  className={`${classes.skipBtn} ${classes.btn}`}
-                  variant="light"
+                  variant="subtle"
+                  leftIcon={<IconChevronLeft />}
+                  className={classes.backBtn}
                   size={mediumScreen ? 'md' : 'xl'}
-                  onClick={() => handleSkipStep()}
+                  onClick={() => handleGoToPreviousSteps()}
                 >
-                  Remplir plus tard
+                  Précédent
                 </Button>
-                <Button
-                  className={`${classes.nextBtn} ${classes.btn}`}
-                  radius={15}
-                  size={mediumScreen ? 'md' : 'xl'}
-                  onClick={() => handleGoToNextSteps()}
-                >
-                  {activeSteps === 1 ? 'Terminer' : 'Suivant'}
-                </Button>
+                <Group align="center" spacing={20}>
+                  <Button
+                    radius={15}
+                    className={`${classes.skipBtn} ${classes.btn}`}
+                    variant="light"
+                    size={mediumScreen ? 'md' : 'xl'}
+                    onClick={() => handleSkipStep()}
+                  >
+                    Remplir plus tard
+                  </Button>
+                  <Button
+                    className={`${classes.nextBtn} ${classes.btn}`}
+                    radius={15}
+                    size={mediumScreen ? 'md' : 'xl'}
+                    onClick={() => handleGoToNextSteps()}
+                  >
+                    {activeSteps === 1 ? 'Terminer' : 'Suivant'}
+                  </Button>
+                </Group>
               </Group>
-            </Group>
-          )}
-        </Container>
-      </main>
-    </div>
+            )}
+          </Container>
+        </main>
+      </div>
+    </>
   );
 };
 

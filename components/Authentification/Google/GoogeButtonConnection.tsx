@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 
 import { Button, createStyles } from '@mantine/core';
 import { useRouter } from 'next/router';
@@ -30,9 +30,16 @@ export const GoogleButtonConnection: FC<IProps> = (props) => {
   const { classes } = useStyles();
   const { signInWithGoogle } = useAuth();
 
+  const currentPath = useMemo(() => router.asPath, [router.asPath]);
+
   const handleSignupWithGoogle = async () => {
     await signInWithGoogle();
-    router.push('/account_configuration');
+    if (currentPath === '/auth/signin') {
+      router.push('/dashboard');
+    }
+    if (currentPath === '/auth/signup') {
+      router.push('/account_configuration');
+    }
   };
 
   return (

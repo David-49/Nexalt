@@ -20,6 +20,7 @@ import { IconAlertCircle } from '@tabler/icons';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 import { useAuth } from '../../context/AuthContext';
 import { ILogin } from '../../types/Login';
 import { GoogleButtonConnection } from '../../components/Authentification/Google/GoogeButtonConnection';
@@ -102,6 +103,7 @@ const useStyles = createStyles((theme) => ({
   rightChild: {
     display: 'flex',
     justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
     width: '50%',
@@ -198,135 +200,140 @@ const SignIn: NextPage<IProps> = (props) => {
     try {
       await signin(data.email, data.password);
       setIsConnectionFailed(false);
-      router.push('/');
+      router.push('/dashboard');
     } catch (err: any) {
       setIsConnectionFailed(true);
     }
   };
 
   return (
-    <Container fluid className={classes.container}>
-      <div className={classes.leftChild}>
-        <div className={classes.whiteMaskBottom} />
-        <div className={classes.tricks} />
-        <Link href="/">
-          <a>
-            <Image
-              src="/assets/logo_blanc.svg"
-              alt="Logo de Nexalt"
-              width={120}
-              height={40}
-              priority
-            />
-          </a>
-        </Link>
-        <Text color="#fff" className={classes.text}>
-          <span className={classes.heightSpan} style={{ fontWeight: 800 }}>
-            Entreprises,
-          </span>
-          <span className={classes.heightSpan}>Trouver votre</span>
-          <span className={classes.heightSpan}> prochaine perle rare</span>
-        </Text>
-      </div>
-      <div className={classes.rightChild}>
-        {isConnectionFailed && (
-          <Alert
-            color="red"
-            title="Échec de connexion !"
-            icon={<IconAlertCircle />}
-            my="md"
-          >
-            Votre email ou votre mot de passe est incorrect.
-            <br />
-            Veuillez réessayez.
-          </Alert>
-        )}
-        <Group
-          direction="column"
-          align="center"
-          className={classes.containerConnexion}
-        >
-          <Group position="apart" style={{ width: '100%' }}>
-            <Title className={classes.title} order={1}>
-              Connexion
-            </Title>
-            <Link href="/auth/signup" passHref>
-              <Button
-                component="a"
-                radius={10}
-                size="lg"
-                className={classes.inscriptionBtn}
-              >
-                M'inscrire
-              </Button>
-            </Link>
-          </Group>
-          <form
-            className={classes.form}
-            onSubmit={form.onSubmit((values) => handleLogin(values))}
-          >
-            <TextInput
-              placeholder="Adresse mail"
-              classNames={{
-                input: classes.input,
-              }}
-              radius={15}
-              required
-              variant="filled"
-              size="xl"
-              {...form.getInputProps('email')}
-            />
-            <PasswordInput
-              placeholder="Mot de passe"
-              classNames={{
-                input: classes.input,
-              }}
-              required
-              radius={15}
-              variant="filled"
-              size="xl"
-              {...form.getInputProps('password')}
-            />
-            <Group align="center" position="apart">
-              <Checkbox
-                label="Se souvenir de moi"
-                size="xs"
-                color="indigo"
-                styles={{
-                  label: { color: 'gray', cursor: 'pointer' },
-                  input: {
-                    cursor: 'pointer',
-                  },
-                }}
+    <>
+      <Head>
+        <title>Connexion</title>
+      </Head>
+      <Container fluid className={classes.container}>
+        <div className={classes.leftChild}>
+          <div className={classes.whiteMaskBottom} />
+          <div className={classes.tricks} />
+          <Link href="/">
+            <a>
+              <Image
+                src="/assets/logo_blanc.svg"
+                alt="Logo de Nexalt"
+                width={120}
+                height={40}
+                priority
               />
-              <Link href="/auth/reset_password">
-                <a className={classes.linkResetPassword}>
-                  Mot de passe oublié ?
-                </a>
+            </a>
+          </Link>
+          <Text color="#fff" className={classes.text}>
+            <span className={classes.heightSpan} style={{ fontWeight: 800 }}>
+              Entreprises,
+            </span>
+            <span className={classes.heightSpan}>Trouver votre</span>
+            <span className={classes.heightSpan}> prochaine perle rare</span>
+          </Text>
+        </div>
+        <div className={classes.rightChild}>
+          {isConnectionFailed && (
+            <Alert
+              color="red"
+              title="Échec de connexion !"
+              icon={<IconAlertCircle />}
+              my="md"
+            >
+              Votre email ou votre mot de passe est incorrect.
+              <br />
+              Veuillez réessayez.
+            </Alert>
+          )}
+          <Group
+            direction="column"
+            align="center"
+            className={classes.containerConnexion}
+          >
+            <Group position="apart" style={{ width: '100%' }}>
+              <Title className={classes.title} order={1}>
+                Connexion
+              </Title>
+              <Link href="/auth/signup" passHref>
+                <Button
+                  component="a"
+                  radius={10}
+                  size="lg"
+                  className={classes.inscriptionBtn}
+                >
+                  M'inscrire
+                </Button>
               </Link>
             </Group>
-            <Button
-              radius={15}
-              type="submit"
-              size="lg"
-              mt={30}
-              className={classes.connectionBtn}
+            <form
+              className={classes.form}
+              onSubmit={form.onSubmit((values) => handleLogin(values))}
             >
-              Me connecter
-            </Button>
-          </form>
-          <Divider
-            size="sm"
-            className={classes.divider}
-            label="ou"
-            labelPosition="center"
-          />
-          <div className={classes.containerGoogleConnection}>
-            <GoogleButtonConnection label="Je me connecte avec Google" />
-          </div>
-        </Group>
-      </div>
-    </Container>
+              <TextInput
+                placeholder="Adresse mail"
+                classNames={{
+                  input: classes.input,
+                }}
+                radius={15}
+                required
+                variant="filled"
+                size="xl"
+                {...form.getInputProps('email')}
+              />
+              <PasswordInput
+                placeholder="Mot de passe"
+                classNames={{
+                  input: classes.input,
+                }}
+                required
+                radius={15}
+                variant="filled"
+                size="xl"
+                {...form.getInputProps('password')}
+              />
+              <Group align="center" position="apart">
+                <Checkbox
+                  label="Se souvenir de moi"
+                  size="xs"
+                  color="indigo"
+                  styles={{
+                    label: { color: 'gray', cursor: 'pointer' },
+                    input: {
+                      cursor: 'pointer',
+                    },
+                  }}
+                />
+                <Link href="/auth/reset_password">
+                  <a className={classes.linkResetPassword}>
+                    Mot de passe oublié ?
+                  </a>
+                </Link>
+              </Group>
+              <Button
+                radius={15}
+                type="submit"
+                size="lg"
+                mt={30}
+                className={classes.connectionBtn}
+              >
+                Me connecter
+              </Button>
+            </form>
+            <Divider
+              size="sm"
+              className={classes.divider}
+              label="ou"
+              labelPosition="center"
+            />
+            <div className={classes.containerGoogleConnection}>
+              <GoogleButtonConnection label="Je me connecte avec Google" />
+            </div>
+          </Group>
+        </div>
+      </Container>
+    </>
   );
 };
 
