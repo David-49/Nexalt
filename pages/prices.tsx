@@ -135,7 +135,7 @@ const Prices: NextPage<IProps> = () => {
         <Container fluid className={classes.containerPage}>
             <Head>
                 <title>Offres et tarifs</title>
-                <meta name="description" content="NVous pourrez retrouver toutes les offres et tarifs proposés par nexalt" />
+                <meta name="description" content="Vous pourrez retrouver toutes les offres et tarifs proposés par nexalt" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={classes.containerHeader}>
@@ -155,7 +155,7 @@ const Prices: NextPage<IProps> = () => {
                                     weight={800}
                                     color={colors.primaryBlue}
                                 >
-                                    Offre
+                                    Offres
                                 </Text>
                                 <Text
                                     className={classes.title}

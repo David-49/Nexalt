@@ -190,7 +190,7 @@ const Home: NextPage<IProps> = () => {
                   weight={800}
                   color={colors.primaryBlue}
                 >
-                  Trouver votre
+                  Trouvez votre
                 </Text>
                 <Text
                   className={classes.title}
@@ -201,7 +201,7 @@ const Home: NextPage<IProps> = () => {
                 </Text>
               </Title>
               <Text size="xl" className={classes.textIntro}>
-                Avec Nexalt, tout devient plus simple ! Dénicher facilement
+                Avec Nexalt, tout devient plus simple ! Dénichez facilement
                 votre entreprise ou votre alternant grâce à nos services.
               </Text>
               <div className={classes.containerFilter}>

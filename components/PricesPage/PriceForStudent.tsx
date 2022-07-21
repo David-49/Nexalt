@@ -66,7 +66,7 @@ export const PriceForStudent: FC<IProps> = (props) => {
     <div className={classes.container}>
       <div className={classes.content}>
         <Title className={classes.title} order={2}>
-          Pour les édudiants
+          Pour les étudiants
         </Title>
         <span className={classes.forStudentPrice}>20€/mois</span>
       </div>
