@@ -32,6 +32,6 @@ yarn dev
 
 Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
 
-## Déploiment
+## Déploiement
 
 L'application est déployé sur Vercel sous le nom de [Nexalt](https://nexalt.vercel.app/).
